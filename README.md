@@ -2,8 +2,8 @@
 Uma aplicação na web para World Of Darkness.
 
 <h1>Proejto WOD</h1>
-<h5>O projeto WOD é um projeto inspirado em "C.R.I.S", um web app para criação de fichas e campanhas de RPG.
-  A aplicação será baseada no sistema de World Od Darkness, sistema de RPG com três principais histórias:</h5>
+<h5>O projeto WOD é um projeto inspirado em "C.R.I.S", um web app para criação de fichas e campanhas de RPG.<br>
+  A aplicação será baseada no sistema de World Of Darkness, sistema de RPG com três principais histórias:</h5>
     <ul>
         <li>Werewolf: The Apocalypse</li>
         <li>Vampire: The Masquerade</li>
