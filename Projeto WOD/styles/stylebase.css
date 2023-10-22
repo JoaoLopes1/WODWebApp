@@ -127,5 +127,32 @@ img {
 }
 
 .main_mage:hover {
-    background-image: url(assets/imagemtempMAGE.jpg");
+    background-image: url(assets/imagemtempMAGE.jpg);
 }
+
+/* .button_mage {
+    border: 0;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+h1_modal {
+    margin-bottom: 1rem;
+} */
+
+button {
+    padding: .6rem 1.2rem;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: .8;
+    font-size: 1rem;
+    transition: .4s;
+}
+

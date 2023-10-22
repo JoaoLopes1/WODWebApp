@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto WOD</title>
     <link rel="stylesheet" href="styles/stylebase.css">
+    <link rel="stylesheet" href="styles/style_modal.css">
 </head>
 <body>
     <header class="navegacao">
         <nav class="navegacao_itens">
             <a class="navegacao_itens_link" href="index.html">Home</a>
             <a class="navegacao_itens_link" href="https://whitewolf.fandom.com/wiki/World_of_Darkness">Wiki</a>
-            <a class="navegacao_itens_link" href="char.html">Characters</a>
+            <a class="navegacao_itens_link" href="char.html">Char's</a>
             <a class="navegacao_itens_link" href="choricle.html">Chronicles</a>
-            <a class="navegacao_itens_link" href="perfil.html">Perfil</a>
+            <a class="navegacao_itens_link" onclick="openProfile()">Profile</a>
         </nav>
     </header>
 
@@ -39,6 +40,7 @@
                 <a class="main_mage_link" href="https://whitewolf.fandom.com/wiki/Mage:_The_Ascension">
                     <img src="assets/imagemtempMAGE.jpg">
                 </a>
+                <div><button class="button_mage" id="open-modal">Criar Ficha</button></div>
             </section>
         </div>
     </main>
@@ -46,6 +48,19 @@
     <footer>
 
     </footer>
+    <button id="open-modal">Abrir Modal</button>
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <h2>Este é o Modal</h2>
+            <button id="close-modal">Fechar</button>
+        </div>
+        <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptatem debitis qui cumque facilis. Ab culpa odit commodi recusandae aliquam quae quas saepe minus provident, excepturi, sunt aliquid ducimus vitae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto libero exercitationem, expedita placeat consectetur autem esse ea eum incidunt eligendi deserunt quaerat velit repellat distinctio fuga delectus ducimus! Reiciendis, rem?</p>
+        </div>
+    </div>
 
 </body>
+    <script src="scripts/script.js"></script>
 </html>
