@@ -13,15 +13,3 @@ el) => {
     el.addEventListener("click", () => toggleModal());
 });
 
-
-
-const logged = false
-
-function verify() {
-
-    return logged
-}
-
-function openProfile() {
-    
-}

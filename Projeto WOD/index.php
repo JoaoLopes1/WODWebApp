@@ -1,0 +1,124 @@
+<?php
+include("php/conexao.php");
+
+if(isset($_POST["email"]) || isset($_POST['senha'])){
+    
+    if(strlen($_POST['email'])== 0){
+        echo'Preencha seu e-mail';
+    } else if(strlen($_POST['senha'])== 0){
+        echo 'Preencha sua senha';
+    } else {
+    
+        $email = $mysqli ->real_escape_string($_POST['email']);
+        $senha = $mysqli ->real_escape_string($_POST['senha']);
+
+        $sql_code = "SELECT * FROM login WHERE email = '$email' AND senha = '$senha'";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: ".mysqli_error($mysqli));
+
+        $quantidade = $sql_query->num_rows;
+        
+        if($quantidade == 1){
+
+            $usuario = $sql_query->fetch_assoc();
+            
+            if(!isset($_SESSION)) {
+                session_start();
+            }
+
+            $_SESSION["id"] = $usuario["id"];
+            $_SESSION["nome"] = $usuario["nome"];
+
+            header("Location: php/teste.php");
+
+        }else {
+            echo "Falha ao logar! E-mail ou senha incorretos";
+        }
+
+    }
+
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto WOD</title>
+    <link rel="stylesheet" href="styles/stylebase.css">
+    <link rel="stylesheet" href="styles/style_modal.css">
+</head>
+<body>
+    <header class="navegacao">
+        <nav class="navegacao_itens">
+            <a class="navegacao_itens_link" href="index.html">Home</a>
+            <a class="navegacao_itens_link" href="https://whitewolf.fandom.com/wiki/World_of_Darkness" target="_blank">Wiki</a>
+            <a class="navegacao_itens_link" href="php/chars.php">Chars</a>
+            <a class="navegacao_itens_link" href="choricle.html">Chronicles</a>
+            <a class="navegacao_itens_link" onclick="openProfile()">Profile</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="main_display">
+            <section class="main_werewolf">
+                <h1 class="main_werewolf_title">Werewolf: The Apocalypse</h1>
+                <a class="main_werewolf_link" href="https://whitewolf.fandom.com/wiki/Werewolf:_The_Apocalypse">
+                    <img src="assets/werewolf.jpg">
+                </a>
+            </section>
+
+            <section class="main_vampire">
+                <h1 class="main_vampire_title">Vampire: The Masquerade</h1>
+                <a class="main_vampire_link" href="https://whitewolf.fandom.com/wiki/Vampire:_The_Masquerade">
+                    <img src="assets/vampire.jpg">
+                </a>
+            </section>
+
+            <section class="main_mage">
+                <h1 class="main_mage_title">Mage: The Ascension</h1>
+                <a class="main_mage_link" href="https://whitewolf.fandom.com/wiki/Mage:_The_Ascension">
+                    <img src="assets/imagemtempMAGE.jpg">
+                </a>
+                <div><button class="button_mage" id="open-modal">Criar Ficha</button></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    <button id="open-modal">Abrir Modal</button>
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <h2>Login</h2>
+            <button id="close-modal">Fechar</button>
+        </div>
+        <div class="modal-body">
+            <form action="" method="POST">
+                <p>Digite seus dados para acessar.</p>
+                <label>E-mail</label>
+                <input type="text" name="email" placeholder="Digite o seu e-mail">
+                
+                <label>Senha</label>
+                <input type="password" name="senha" placeholder="Digite sua senha">
+                
+                <label>Usuário</label>
+                <input type="text" name="nome" placeholder="Digite seu usuário">
+                
+                <a href="#">Esqueci minha senha</a>
+                <input type="submit" value="Entrar"/>
+
+                <p>Ainda não tem uma conta? <a href="#">Crie agora </a></p>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+    <script src="scripts/script.js"></script>
+</html>

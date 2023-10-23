@@ -1,5 +1,6 @@
 #open-modal {
     background-color: purple;
+    color: white;
 }
 
 button:hover {
@@ -57,4 +58,10 @@ button:hover {
 
 #modal.hide {
     top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
