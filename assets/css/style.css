@@ -1,0 +1,139 @@
+:root {
+    --cor-primaria: #1B1A17;
+    --cor-secundaria: #B4B4B3;
+    --cor-terciaria: white;
+    --cor-hover: #272727;
+    --cor-werewolf: #94EB81;
+    --cor-vampire: #FF464C;
+    --cor-mage: #AB5BC7;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+    --fonte-terciaria: Darkness;
+    --fonte-quarternaria: Bergel;
+    --fonte-quinternaria: Akira;
+}
+
+body {
+    overflow: hidden;
+}
+
+.navegacao_itens {
+    display: flex;
+    gap: 5%;
+    padding-bottom: 1%;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.navegacao_itens_link {
+    font-family: var(--fonte-quinternaria);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    padding: 2% 0 0 8%;
+    text-decoration: none;
+    z-index: 1;
+}
+
+main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 80vw;
+    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+}
+
+main .personagem {
+    display: none;
+    height: 100vh;
+}
+
+main .personagem.selecionado {
+    display: block;
+}
+
+body main .personagem .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.conteudo {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 620px;
+    z-index: 1;
+}
+
+.conteudo .nome-personagem {
+    color: #ffffff;
+    font-size: 48px;
+    font-family: "Secular One";
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.conteudo .descricao {
+    color: #ffffff;
+    font-family: "Rubik";
+    line-height: 24px;
+}
+
+.conteudo .logo {
+    background-image: url("../src/img/SymbolWoD5e.webp");
+    background-size: 200px;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 80px;
+}
+
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.botoes .botao {
+    border: none;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.botoes .botao img {
+    border-radius: 50%;
+}
+
+.botoes .botao.selecionado {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #D9D9D9;
+}
+
+.new_img {
+    width: 90px;
+    height: 86px;
+}
+
+.new_wpp {
+    width: 1920px;
+    height: 1200px;
+    z-index: -1;
+    opacity: 1;
+}
