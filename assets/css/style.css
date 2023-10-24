@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+@font-face {
+    font-family: Darkness;
+    src: url(../src/img/fonts/cw_oldwd.ttf)
+}
+
+@font-face {
+    font-family: Akira;
+    src: url(../src/img/fonts/AKIRA___.ttf)
+}
+
+@font-face {
+    font-family: Bergel;
+    src: url(../src/img/fonts/BERGELL.TTF)
+}
+
+
 :root {
     --cor-primaria: #1B1A17;
     --cor-secundaria: #B4B4B3;
@@ -18,23 +36,32 @@ body {
     overflow: hidden;
 }
 
-.navegacao_itens {
-    display: flex;
-    gap: 5%;
-    padding-bottom: 1%;
-    z-index: 1;
-    background-color: transparent;
-}
-
-.navegacao_itens_link {
-    font-family: var(--fonte-quinternaria);
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: var(--cor-terciaria);
-    padding: 2% 0 0 8%;
+.container {
+    position: absolute;
+    margin: 20px;
+    width: auto;
+    z-index: 2;
+  }
+  
+  /* The navbar */
+  .topnav {
+    overflow: hidden;
+  }
+  
+  /* Navbar links */
+  .topnav a {
+    float: left;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 75px;
     text-decoration: none;
-    z-index: 1;
-}
+    font-size: 1.75rem;
+    font-family: var(--fonte-quinternaria);
+  }
+  
+  .topnav a:hover {
+    transform: scale(1.1);
+  }
 
 main::after {
     content: "";
@@ -55,11 +82,11 @@ main .personagem.selecionado {
     display: block;
 }
 
-body main .personagem .imagem {
+main .personagem .imagem {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: 2;
 }
 
 .conteudo {
@@ -123,7 +150,7 @@ body main .personagem .imagem {
 
 .botoes .botao.selecionado {
     transform: scale(1.2);
-    box-shadow: 0 0 10px #D9D9D9;
+    box-shadow: 0 0 10px var(--cor-primaria);
 }
 
 .new_img {
@@ -134,6 +161,4 @@ body main .personagem .imagem {
 .new_wpp {
     width: 1920px;
     height: 1200px;
-    z-index: -1;
-    opacity: 1;
 }
