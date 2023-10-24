@@ -1,0 +1,23 @@
+    <!-- Modal para login -->
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <h2>Login</h2>
+            <button id="close-modal">Fechar</button>
+        </div>
+        <div class="modal-body">
+            <form action="" method="POST">
+                <p>Digite seus dados para acessar.</p>                
+                <label>Usuário</label>
+                <input type="text" name="nome" placeholder="Digite seu usuário">
+
+                <label>Senha</label>
+                <input type="password" name="senha" placeholder="Digite sua senha">
+                
+                <a href="#">Esqueci minha senha</a>
+                <input type="submit" value="Entrar"/>
+
+                <p>Ainda não tem uma conta? <a id="open-modal2">Crie agora </a></p>
+            </form>
+        </div>
+    </div>
