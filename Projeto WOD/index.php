@@ -28,7 +28,7 @@
                 $_SESSION["id"] = $usuario["id"];
                 $_SESSION["nome"] = $usuario["nome"];
 
-                header("Location: home_page.html");
+                header("Location: home_page.php");
 
             }else {
                 echo "<script>alert('Usuário ou Senha Incorretos');</script>";

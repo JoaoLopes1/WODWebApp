@@ -1,3 +1,8 @@
+<?php
+
+include('protect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +15,11 @@
 <body>
     <header class="navegacao">
         <nav class="navegacao_itens">
-            <a class="navegacao_itens_link" href="index.html">Home</a>
+            <a class="navegacao_itens_link" href="home_page.php">Home</a>
             <a class="navegacao_itens_link" href="https://whitewolf.fandom.com/wiki/World_of_Darkness" target="_blank">Wiki</a>
-            <a class="navegacao_itens_link" href="php/chars.php">Chars</a>
+            <a class="navegacao_itens_link" href="chars.php">Chars</a>
             <a class="navegacao_itens_link" href="choricle.html">Chronicles</a>
-            <a class="navegacao_itens_link" onclick="openProfile()">Profile</a>
+            <a class="navegacao_itens_link" href="profile.php">Profile</a>
         </nav>
     </header>
 
