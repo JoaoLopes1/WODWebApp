@@ -1,3 +1,5 @@
+/* Isso, antes, era o CSS do modal, agora está sendo usado para login e criar conta */
+
 #open-modal {
     background-color: purple;
     color: white;
@@ -64,4 +66,9 @@ form {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.alerta_login {
+    color: red;
+    margin-top: -20px;
 }
