@@ -1,38 +1,38 @@
 <?php
     include("php/conexao2.php");
-    if(isset($_POST["nome"]) || isset($_POST['senha']) || isset($_POST['email'])){
-        $nome= $_POST['nome'];
-        $email= $_POST['email'];
-        $senha= $_POST['senha'];
+    if(isset($_POST["userNAME"]) || isset($_POST['userPASSW']) || isset($_POST['userMAIL'])){
+        $userNAME= $_POST['userNAME'];
+        $userMAIL= $_POST['userMAIL'];
+        $userPASSW= $_POST['userPASSW'];
 
-        if(strlen($_POST['nome'])== 0){
+        if(strlen($_POST['userNAME'])== 0){
             echo "<script>alert('Preencha seu Usuário');</script>";
-        } else if(strlen($_POST['senha'])== 0){
+        } else if(strlen($_POST['userPASSW'])== 0){
             echo "<script>alert('Preencha sua Senha');</script>";
-        } else if(strlen($_POST['email']) == 0) {
+        } else if(strlen($_POST['userMAIL']) == 0) {
             echo "<script>alert('Preencha seu E-mail');</script>";
         } else {
             //Vendo se ja tem esse e-mail
-            $sql_email = "SELECT * FROM login WHERE email = '$email'";
-            $sql_query = $conexao->query($sql_email) or ("Falha na execução do código SQL: ".mysqli_error($mysqli));
+            $sql_userMAIL = "SELECT * FROM login WHERE userMAIL = '$userMAIL'";
+            $sql_query = $conexao->query($sql_userMAIL) or ("Falha na execução do código SQL: ".mysqli_error($mysqli));
 
             //Vendo se ja tem esse usuário
-            $sql_user = "SELECT * FROM login WHERE nome = '$nome'";
+            $sql_user = "SELECT * FROM login WHERE userNAME = '$userNAME'";
             $sql_query2 = $conexao->query($sql_user) or ("Falha na execução do código SQL:".mysqli_error($mysqli));
 
-            $quantidade_email = $sql_query->num_rows;
-            $quantidade_nome = $sql_query2->num_rows;
+            $quantidade_userMAIL = $sql_query->num_rows;
+            $quantidade_userNAME = $sql_query2->num_rows;
             
-            if($quantidade_email == 1){
+            if($quantidade_userMAIL == 1){
                 echo "<script>alert('Email já cadastrado. Tente fazer Login');</script>";
             }
 
-            elseif($quantidade_nome ==1) {
+            elseif($quantidade_userNAME ==1) {
                 echo "<script>alert('Usuário já cadastrado. Tente fazer Login');</script>";
             }
             
             else{
-                $sql="INSERT INTO login(nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+                $sql="INSERT INTO login(userNAME, userMAIL, userPASSW) VALUES ('$userNAME', '$userMAIL', '$userPASSW')";
 
                 if(mysqli_query($conexao, $sql)) {
                 echo "Usuário cadastrado com sucesso!";
@@ -72,13 +72,13 @@
                 <p>Digite seus dados para acessar.</p>   
 
                 <label>Usuário</label>
-                <input type="text" name="nome" placeholder="Digite seu usuário">
+                <input type="text" name="userNAME" placeholder="Digite seu usuário">
                 
                 <label>E-mail</label>
-                <input type="e-mail" name="email" placeholder="Digite seu e-mail">
+                <input type="e-mail" name="userMAIL" placeholder="Digite seu e-mail">
 
                 <label>Senha</label>
-                <input type="password" name="senha" placeholder="Digite sua senha">
+                <input type="password" name="userPASSW" placeholder="Digite sua senha">
                 
                 <a href="#">Esqueci minha senha</a>
                 <input type="submit" value="Criar"/>

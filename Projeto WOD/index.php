@@ -1,18 +1,18 @@
 <?php
     include("php/conexao.php");
     $msg = "";
-    if(isset($_POST["nome"]) || isset($_POST['senha'])){
+    if(isset($_POST["userNAME"]) || isset($_POST['userPASSW'])){
         
-        if(strlen($_POST['nome'])== 0){
+        if(strlen($_POST['userNAME'])== 0){
             echo "<script>alert('Preencha seu usuário');</script>";
-        } else if(strlen($_POST['senha'])== 0){
+        } else if(strlen($_POST['userPASSW'])== 0){
             echo "<script>alert('Preencha sua senha');</script>";
         } else {
         
-            $nome = $mysqli ->real_escape_string($_POST['nome']);
-            $senha = $mysqli ->real_escape_string($_POST['senha']);
+            $userNAME = $mysqli ->real_escape_string($_POST['userNAME']);
+            $userPASSW = $mysqli ->real_escape_string($_POST['userPASSW']);
 
-            $sql_code = "SELECT * FROM login WHERE nome = '$nome' AND senha = '$senha'";
+            $sql_code = "SELECT * FROM login WHERE userNAME = '$userNAME' AND userPASSW = '$userPASSW'";
             $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: ".mysqli_error($mysqli));
 
             $quantidade = $sql_query->num_rows;
@@ -25,8 +25,8 @@
                     session_start();
                 }
 
-                $_SESSION["id"] = $usuario["id"];
-                $_SESSION["nome"] = $usuario["nome"];
+                $_SESSION["userID"] = $usuario["userID"];
+                $_SESSION["userNAME"] = $usuario["userNAME"];
 
                 header("Location: home_page.php");
 
@@ -59,10 +59,10 @@
                 <div class="alerta_login"></div>
                 </p>                
                 <label>Usuário</label>
-                <input type="text" name="nome" placeholder="Digite seu usuário">
+                <input type="text" name="userNAME" placeholder="Digite seu usuário">
 
                 <label>Senha</label>
-                <input type="password" name="senha" placeholder="Digite sua senha">
+                <input type="password" name="userPASSW" placeholder="Digite sua senha">
                 
                 <input type="submit" value="Entrar"/>
 
