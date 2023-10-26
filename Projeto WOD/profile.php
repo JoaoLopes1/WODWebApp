@@ -117,6 +117,6 @@ if($funilResult) {
 
     <p><a href="logout.php">Desconectar</a></p>
 
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/home_page.js"></script>
 </body>
 </html>

@@ -58,36 +58,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style_modal.css">
+    <link rel="stylesheet" href="assets/css/style_login.css">
     <title>Criar Conta</title>
 </head>
 <body>
-<div id="fade" class=""></div>
-    <div id="modal" class="">
-        <div class="modal-header">
-            <h2>Criar Conta</h2>
-        </div>
-        <div class="modal-body">
-            <form action="" method="POST">
-                <p>Digite seus dados para acessar.</p>   
+    <section id="background_image" ></section>
+    <div id="fade" class=""></div>
+        <div id="modal" class="">
+            <div class="modal-header">
+                <h2>Criar Conta</h2>
+            </div>
+            <div class="modal-body">
+                <form action="" method="POST">
+                    <p>Digite seus dados para acessar.</p>   
 
-                <label>Usuário</label>
-                <input type="text" name="userNAME" placeholder="Digite seu usuário">
-                
-                <label>E-mail</label>
-                <input type="e-mail" name="userMAIL" placeholder="Digite seu e-mail">
+                    <label>Usuário</label>
+                    <input type="text" name="userNAME" placeholder="Digite seu usuário">
+                    
+                    <label>E-mail</label>
+                    <input type="e-mail" name="userMAIL" placeholder="Digite seu e-mail">
 
-                <label>Senha</label>
-                <input type="password" name="userPASSW" placeholder="Digite sua senha">
-                
-                <a href="#">Esqueci minha senha</a>
-                <input type="submit" value="Criar"/>
+                    <label>Senha</label>
+                    <input type="password" name="userPASSW" placeholder="Digite sua senha">
+                    
+                    <a href="#">Esqueci minha senha</a>
+                    <input type="submit" value="Criar"/>
 
-                <p>Já possui uma conta? <a href="index.php">Entre Agora</a> </p>
-            </form>
+                    <p>Já possui uma conta? <a href="index.php">Entre Agora</a> </p>
+                </form>
+            </div>
         </div>
     </div>
-
 </body>
 </html>
 

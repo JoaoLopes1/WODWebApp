@@ -78,6 +78,6 @@ include('protect.php');
 			</li>
 		</ul>
 
-		<script src="./assets/js/index.js"></script>
+		<script src="./assets/js/home_page.js"></script>
 	</body>
 </html>
