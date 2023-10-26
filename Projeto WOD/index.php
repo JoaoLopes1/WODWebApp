@@ -47,17 +47,15 @@
     <title>Login</title>
 </head>
 <body>
-<div id="fade" class=""></div>
+    <section id="background_image" ></section>
+    <div id="fade" class=""></div>
     <div id="modal" class="">
         <div class="modal-header">
             <h2>Login</h2>
-            <p></p>
         </div>
         <div class="modal-body">
             <form action="" method="POST">
-                <p>Digite seus dados para acessar.
-                <div class="alerta_login"></div>
-                </p>                
+                <p>Digite seus dados para acessar.</p>                
                 <label>Usuário</label>
                 <input type="text" name="userNAME" placeholder="Digite seu usuário">
 
