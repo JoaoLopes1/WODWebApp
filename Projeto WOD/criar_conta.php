@@ -36,7 +36,7 @@
 
                 if(mysqli_query($conexao, $sql)) {
                 echo "Usuário cadastrado com sucesso!";
-                header("Location: index.php");
+                
                 }
 
                 else{
@@ -44,13 +44,11 @@
 
                 }
                 mysqli_close($conexao);
+                header("Location: index.php");
             }
 
     }
-}
-    
-        
-        
+}     
 ?>
 
 <!DOCTYPE html>
@@ -66,43 +64,53 @@
     <div id="fade" class=""></div>
     <div id="modal" class="">
         <div class="modal-header">
-            <h2>Criar Conta</h2>
+            <h2>Crie sua Conta</h2>
         </div>
         <div class="modal-body">
-            <form action="" method="POST">
-                <p>Digite seus dados para acessar.</p>   
-
+            <form action="" method="POST" id="form"> 
                 <label>Usuário</label>
-                <input type="text" name="userNAME" placeholder="Digite seu usuário">
+                <input type="text" name="userNAME" placeholder="Digite seu usuário" required>
                 
                 <label>E-mail</label>
-                <input type="e-mail" name="userMAIL" placeholder="Digite seu e-mail">
+                <input type="email" name="userMAIL" placeholder="Digite seu e-mail" id="verify_email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" required>
 
                 <label>Senha</label>
-                <input type="password" name="userPASSW" placeholder="Digite sua senha">
+                <input type="password" name="userPASSW" placeholder="Digite sua senha" required>
                 
-                <a href="#">Esqueci minha senha</a>
-                <input type="submit" value="Criar"/>
+                <!-- <a href="#">Esqueci minha senha</a> -->
+                <input type="submit" value="Criar" class= "submit_button"/>
 
                 <p>Já possui uma conta? <a href="index.php">Entre Agora</a> </p>
             </form>
         </div>
     </div>
     <script>
-        function changeBg (){
-            const images = [
-            'url("../img/mageteste.jpg")',
-            'url("../img/VampireNEW.jpg")',
-            'url("../img/werewolfNEW.jpg")'
-            ]
-            const section = document.querySelector('section')
-            const bg = images[Math.floor(Math.random() * images.length)]
+        const images = [
+            'url("assets/img/VampireNEW.jpg")',
+            'url("assets/img/mageteste.jpg")',
+            'url("assets/img/werewolfNEW.jpg")',
+        ];
 
-            section.style.background_image = bg;
-            
+        let currentPosition = 0;
+        const section = document.getElementById('background_image');
+
+        function changeBg() {
+            section.style.opacity = 0; // Define a opacidade para 0 para ocultar a imagem atual
+
+            setTimeout(function () {
+            section.style.backgroundImage = images[currentPosition];
+            section.style.opacity = 1; // Define a opacidade para 1 para exibir a nova imagem
+            currentPosition = (currentPosition + 1) % images.length;
+            }, 1000); // Tempo igual à duração da transição em CSS (1 segundo)
         }
-        setInterval(changeBg,100)
+
+        // Inicializa a primeira imagem
+        section.style.backgroundImage = images[currentPosition];
+        currentPosition = (currentPosition + 1) % images.length;
+
+        setInterval(changeBg, 4000);
     </script>
+    <script src="assets/js/login.js"></script>
 </body>
 </html>
 

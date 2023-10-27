@@ -4,7 +4,7 @@ include('protect.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,7 +32,7 @@ include('protect.php');
 				</div>
 			</div>
 			<div class="personagem">
-				<img class="imagem" class="new_wpp" src="assets/src/img/werewolfNEW.jpg" alt="Werewolf"/>
+				<img class="imagem" class="new_wpp" src="assets/img/werewolfNEW.jpg" alt="Werewolf"/>
 				<div class="conteudo">
 					<i class="logo"></i>
 					<h2 class="nome-personagem">Werewolf: The Apocalypse</h2>
@@ -41,7 +41,7 @@ include('protect.php');
 			</div>
 
 			<div class="personagem">
-				<img class="imagem" class="new_wpp" src="assets/src/img/VampireNEW.jpg" alt="Vampire"/>
+				<img class="imagem" class="new_wpp" src="assets/img/VampireNEW.jpg" alt="Vampire"/>
 				<div class="conteudo">
 					<i class="logo"></i>
 					<h2 class="nome-personagem">Vampire: The Masquerade</h2>
@@ -51,7 +51,7 @@ include('protect.php');
 			</div>
 
 			<div class="personagem selecionado">
-				<img class="imagem" class="new_wpp" src="assets/src/img/mageteste.jpg" alt="Mage"/>
+				<img class="imagem" class="new_wpp" src="assets/img/mageteste.jpg" alt="Mage"/>
 				<div class="conteudo">
 					<i class="logo"></i>
 					<h2 class="nome-personagem">Mage: The Ascension</h2>
@@ -62,17 +62,17 @@ include('protect.php');
 		<ul class="botoes">
 			<li>
 				<button class="botao">
-					<img src="assets/src/img/werewolfbutton.webp" alt="Werewolf Button" class="new_img"/>
+					<img src="assets/img/werewolfbutton.webp" alt="Werewolf Button" class="new_img"/>
 				</button>
 			</li>
 			<li>
 				<button class="botao">
-					<img src="assets/src/img/vampirebutton.png" alt="Tripulação Roronoa Zoro" class="new_img"/>
+					<img src="assets/img/vampirebutton.png" alt="Tripulação Roronoa Zoro" class="new_img"/>
 				</button>
 			</li>
 			<li>
 				<button class="botao selecionado">
-					<img src="assets/src/img/magebutton.png" alt="Tripulação Monkey D. Luffy" class="new_img"/>
+					<img src="assets/img/magebutton.png" alt="Tripulação Monkey D. Luffy" class="new_img"/>
 				</button>
 			</li>
 			</li>

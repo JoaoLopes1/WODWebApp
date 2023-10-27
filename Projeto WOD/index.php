@@ -1,6 +1,5 @@
 <?php
     include("php/conexao.php");
-    $msg = "";
     if(isset($_POST["userNAME"]) || isset($_POST['userPASSW'])){
         
         if(strlen($_POST['userNAME'])== 0){
@@ -55,20 +54,45 @@
         </div>
         <div class="modal-body">
             <form action="" method="POST">
-                <p>Digite seus dados para acessar.</p>                
+        
                 <label>Usuário</label>
                 <input type="text" name="userNAME" placeholder="Digite seu usuário">
 
                 <label>Senha</label>
                 <input type="password" name="userPASSW" placeholder="Digite sua senha">
                 
-                <input type="submit" value="Entrar"/>
+                <input type="submit" value="Entrar" class = "submit_button"/>
 
                 <p>Ainda não tem uma conta? <a href="criar_conta.php">Crie agora</a> </p>
             </form>
         </div>
     </div>
+    <script>
+        const images = [
+            'url("assets/img/VampireNEW.jpg")',
+            'url("assets/img/mageteste.jpg")',
+            'url("assets/img/werewolfNEW.jpg")',
+        ];
 
+        let currentPosition = 0;
+        const section = document.getElementById('background_image');
+
+        function changeBg() {
+            section.style.opacity = 0; // Define a opacidade para 0 para ocultar a imagem atual
+
+            setTimeout(function () {
+            section.style.backgroundImage = images[currentPosition];
+            section.style.opacity = 1; // Define a opacidade para 1 para exibir a nova imagem
+            currentPosition = (currentPosition + 1) % images.length;
+            }, 1000); // Tempo igual à duração da transição em CSS (1 segundo)
+        }
+
+        // Inicializa a primeira imagem
+        section.style.backgroundImage = images[currentPosition];
+        currentPosition = (currentPosition + 1) % images.length;
+
+        setInterval(changeBg, 4000);
+    </script>
     <script src="scripts/script"></script>
 </body>
 </html>

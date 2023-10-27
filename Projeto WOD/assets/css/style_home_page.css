@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: Darkness;
-    src: url(../src/img/fonts/cw_oldwd.ttf)
+    src: url(../img/fonts/cw_oldwd.ttf)
 }
 
 @font-face {
     font-family: Akira;
-    src: url(../src/img/fonts/AKIRA___.ttf)
+    src: url(../img/fonts/AKIRA___.ttf)
 }
 
 @font-face {
     font-family: Bergel;
-    src: url(../src/img/fonts/BERGELL.TTF)
+    src: url(../img/fonts/BERGELL.TTF)
 }
 
 
@@ -63,6 +63,7 @@ body {
     transform: scale(1.1);
   }
 
+  /* Imagem de FUNDO */
 main::after {
     content: "";
     position: fixed;
@@ -89,6 +90,7 @@ main .personagem .imagem {
     z-index: 2;
 }
 
+/* Conteudo escrito, titulos e logo */
 .conteudo {
     position: absolute;
     top: 0;
@@ -113,6 +115,7 @@ main .personagem .imagem {
     color: #ffffff;
     font-family: "Rubik";
     line-height: 24px;
+    max-width: 600px;
 }
 
 .conteudo .logo {
@@ -123,6 +126,7 @@ main .personagem .imagem {
     margin-bottom: 80px;
 }
 
+/* Botões e Imagens dos Botões */
 .botoes {
     position: fixed;
     top: 0;
