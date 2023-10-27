@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: Darkness;
-    src: url(../src/img/fonts/cw_oldwd.ttf)
+    src: url(../../imgs/fonts/cw_oldwd.ttf)
 }
 
 @font-face {
     font-family: Akira;
-    src: url(../src/img/fonts/AKIRA___.ttf)
+    src: url(../../imgs/fonts/AKIRA___.ttf)
 }
 
 @font-face {
     font-family: Bergel;
-    src: url(../src/img/fonts/BERGELL.TTF)
+    src: url(../../imgs/fonts/BERGELL.TTF)
 }
 
 
@@ -21,10 +21,6 @@
     --cor-secundaria: #B4B4B3;
     --cor-terciaria: white;
     --cor-hover: #272727;
-    --cor-werewolf: #94EB81;
-    --cor-vampire: #FF464C;
-    --cor-mage: #AB5BC7;
-
     --fonte-primaria: 'Krona One', sans-serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
     --fonte-terciaria: Darkness;
@@ -32,61 +28,26 @@
     --fonte-quinternaria: Akira;
 }
 
-body {
-    overflow: hidden;
+.config {
+    display: none;
+    height: 100hv;
 }
 
-.container {
-    position: absolute;
-    margin: 20px;
-    width: auto;
-    z-index: 2;
-  }
-  
-  /* The navbar */
-  .topnav {
-    overflow: hidden;
-  }
-  
-  /* Navbar links */
-  .topnav a {
-    float: left;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 14px 75px;
-    text-decoration: none;
-    font-size: 1.75rem;
-    font-family: var(--fonte-quinternaria);
-  }
-  
-  .topnav a:hover {
-    transform: scale(1.1);
-  }
+.config.selecionado{
+    display: flex;
+}
 
-main::after {
-    content: "";
+.bg_img {
     position: fixed;
     top: 0;
-    left: 0;
-    min-height: 100vh;
-    width: 80vw;
-    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
-}
-
-main .personagem {
-    display: none;
-    height: 100vh;
-}
-
-main .personagem.selecionado {
-    display: block;
-}
-
-main .personagem .imagem {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 2;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    width: auto;
+    height: auto;
+    background-size: cover;
 }
 
 .conteudo {
@@ -101,21 +62,21 @@ main .personagem .imagem {
     z-index: 1;
 }
 
-.conteudo .nome-personagem {
-    color: #ffffff;
-    font-size: 48px;
-    font-family: "Secular One";
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.conteudo .descricao {
+.setting {
     color: #ffffff;
     font-family: "Rubik";
     line-height: 24px;
+    max-width: 600px;
 }
 
-.conteudo .logo {
+.descricao {
+    color: #ffffff;
+    font-family: "Rubik";
+    line-height: 24px;
+    max-width: 600px;
+}
+
+.logo {
     background-image: url("../src/img/SymbolWoD5e.webp");
     background-size: 200px;
     height: 200px;
@@ -123,7 +84,7 @@ main .personagem .imagem {
     margin-bottom: 80px;
 }
 
-.botoes {
+.button_list {
     position: fixed;
     top: 0;
     right: 0;
@@ -137,28 +98,48 @@ main .personagem .imagem {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.botoes .botao {
+.button_icon {
     border: none;
     background: #000000;
     cursor: pointer;
     border-radius: 50%;
 }
 
-.botoes .botao img {
-    border-radius: 50%;
-}
-
-.botoes .botao.selecionado {
+.button_icon.selecionado {
     transform: scale(1.2);
     box-shadow: 0 0 10px var(--cor-primaria);
 }
 
-.new_img {
+.icon {
+    border-radius: 50%;
     width: 90px;
     height: 86px;
 }
 
-.new_wpp {
-    width: 1920px;
-    height: 1200px;
+
+/* Nav Bar */
+.container {
+    position: absolute;
+    margin: 20px;
+    width: auto;
+    z-index: 2;
+  }
+  
+.topnav {
+overflow: hidden;
+}
+  
+
+.topnav a {
+float: left;
+color: #FFFFFF;
+text-align: center;
+padding: 14px 75px;
+text-decoration: none;
+font-size: 1.75rem;
+font-family: var(--fonte-quinternaria);
+}
+  
+.topnav a:hover {
+transform: scale(1.1);
 }

@@ -1,0 +1,85 @@
+/* Isso, antes, era o CSS do modal, agora está sendo usado para login e criar conta */
+body {
+    background-color: black;
+}
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 5;
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    color: rgb(170, 169, 169);
+    width: 250px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 20px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(248, 69, 37, .4);
+    margin-bottom: 1rem;
+}
+
+.modal-body p{
+    margin-bottom: 1rem;
+}
+.modal-body a{
+    color: rgb(224, 109, 89);
+}
+
+.modal-body input{
+    margin-bottom: 15px;
+    color: rgb(246, 105, 80);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    height: 25px;
+    border-color: rgba(248, 69, 37, .4);
+    text-align: center;
+}
+
+.modal-body input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(170, 169, 169);
+    border: solid 2px rgba(248, 69, 37, .8);
+}
+
+.submit_button {
+    margin-top: -10px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+#background_image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/VampireNEW.jpg);
+}

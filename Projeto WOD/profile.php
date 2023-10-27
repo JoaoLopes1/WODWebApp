@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 include('protect.php');
 include('php/conexao.php');
 $nomeLOGADO = $_SESSION['userNAME'];
@@ -89,7 +89,7 @@ if($funilResult) {
 
 
 
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -103,20 +103,37 @@ if($funilResult) {
 
 </head>
 <body>
-    
+    <section id="background_image" ></section>
+    <header>
+		<div class="container">
+			<div class="topnav">
+				<a href="home_page.php">Home</a>
+				<a href="https://whitewolf.fandom.com/wiki/World_of_Darkness" target="_blank">Wiki</a>
+				<a href="chars.php">Char's</a>
+				<a href="choricle.php">Chronicles</a>
+				<a href="profile.php" >Profile</a>
+			</div>
+		</div>
+	</header>
+
     <p>Bem Vindo, <?php echo $_SESSION['userNAME']; ?></p>
-    <div class= "profileElements"><p>Imagem de Perfil:</p><img src="<?php echo $pathAtual?>" alt="" class="userProfileImage">
+    <div class= "profileElements"><img src="<?php echo $pathAtual?>" alt="" class="userProfileImage">
         <form method="POST" enctype="multipart/form-data" action="">
-            <p><label>Mudar Imagem: </label>
-                <input name="arquivo" type="file" id="inputArquivo"></p>
-                <label>Mudar Usuário:</label>
+            <label>Usuário:</label>
             <input type="text" value="<?php echo $_SESSION['userNAME']?>">
-            <button type="submit">Salvar</button>
+            <br>
+            <div class="arquivoImagem">
+                <label for="inputArquivo">Imagem</label>
+                <input name="inputArquivo" type="file" id="inputArquivo">
+                <button type="submit">Salvar</button>
+            </div>
         </form>
+        <section>
+            <p>Character's 0/10</p>
+            <p>Chronicles 0/6</p>
+        </section>
+        <a href="logout.php">Desconectar</a>
     </div>
-
-    <p><a href="logout.php">Desconectar</a></p>
-
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/home_page.js"></script>
 </body>
 </html>
