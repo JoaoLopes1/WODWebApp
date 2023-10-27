@@ -22,10 +22,10 @@ include('protect.php');
 	<header>
 		<div class="container">
 			<div class="topnav">
-				<a href="home_page.php">Home</a>
+				<a href="index.html">Home</a>
 				<a href="https://whitewolf.fandom.com/wiki/World_of_Darkness" target="_blank">Wiki</a>
 				<a href="chars.php">Char's</a>
-				<a href="choricle.php">Chronicles</a>
+				<a href="choricle.html">Chronicles</a>
 				<a href="profile.php" >Profile</a>
 			</div>
 		</div>
@@ -67,7 +67,7 @@ include('protect.php');
 			<button class="button_icon">
 				<img src="assets/img/buttonWere.webp" alt="Werewolf Button" class="icon">
 			</button>
-		</li> 
+		</li>
 
 		<li>
 			<button class="button_icon">
