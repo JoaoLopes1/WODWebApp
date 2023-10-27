@@ -78,8 +78,8 @@ form {
     height: 100%;
     transition: opacity 1s ease-in-out;
     display: flex;
-    background-image: url(../img/VampireNEW.jpg);
     background-size: cover;
     justify-content: center;
     align-items: center;
+    background-image: url(../img/VampireNEW.jpg);
 }
