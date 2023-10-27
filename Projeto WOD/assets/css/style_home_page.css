@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: Darkness;
-    src: url(../../imgs/fonts/cw_oldwd.ttf)
+    src: url(../img/fonts/cw_oldwd.ttf)
 }
 
 @font-face {
     font-family: Akira;
-    src: url(../../imgs/fonts/AKIRA___.ttf)
+    src: url(../img/fonts/AKIRA___.ttf)
 }
 
 @font-face {
     font-family: Bergel;
-    src: url(../../imgs/fonts/BERGELL.TTF)
+    src: url(../img/fonts/BERGELL.TTF)
 }
 
 
@@ -45,14 +45,14 @@
     justify-content: center;
     align-items: center;
     z-index: 0;
-    width: auto;
+    width: 100%;
     height: auto;
     background-size: cover;
 }
 
 .conteudo {
     position: absolute;
-    top: 0;
+    top:-10%;
     left: 120px;
     display: flex;
     flex-direction: column;
@@ -64,9 +64,11 @@
 
 .setting {
     color: #ffffff;
-    font-family: "Rubik";
+    font-family: "Bergel";
+    font-size: 45px;
     line-height: 24px;
     max-width: 600px;
+    margin-bottom: 25px;
 }
 
 .descricao {
@@ -142,4 +144,11 @@ font-family: var(--fonte-quinternaria);
   
 .topnav a:hover {
 transform: scale(1.1);
+}
+
+#esquerda {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }

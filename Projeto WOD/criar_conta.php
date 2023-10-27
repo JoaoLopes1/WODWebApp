@@ -86,9 +86,9 @@
     </div>
     <script>
         const images = [
-            'url("assets/img/VampireNEW.jpg")',
-            'url("assets/img/mageteste.jpg")',
-            'url("assets/img/werewolfNEW.jpg")',
+            'url("assets/img/bgVamp.jpg")',
+            'url("assets/img/bgMage.jpg")',
+            'url("assets/img/bgWere.jpg")',
         ];
 
         let currentPosition = 0;

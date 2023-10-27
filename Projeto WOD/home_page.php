@@ -32,8 +32,8 @@ include('protect.php');
 	</header>
 
 	<main>
-		<div class="config">
-			<section class="bg_img"><img src="assets/img/bgWere.jpg" alt="Background Werewolf"></section>
+		<div class="config selecionado">
+			<img src="assets/img/bgWere.jpg" alt="Background Werewolf" class="bg_img">
 			<div class="conteudo">
 				<i class="logo"></i>
 				<h2 class="setting">Werewolf: The Apocalypse</h2>
@@ -42,16 +42,16 @@ include('protect.php');
 		</div>
 
 		<div class="config">
-			<img src="assets/img/bgVamp.jpg" alt="Background Vampire" class="bg_img">
+			<img src="assets/img/bgVamp.jpg" alt="Background Vampire" class="bg_img" id="esquerda">
 			<div class="conteudo">
 				<i class="logo"></i>
 				<h2 class="setting">Vampire: The Masquerade</h2>
-				<p class="descricao">The Cainites (also called Kindred), are descendants of Caine (the Biblical Cain), cursed with a thirst for blood, vulnerability to sunlight and immortality. They are forever subject to the Beast, their raging animal urges of hunger, fear and rage.
+				<p class="descricao" class="vampiro">The Cainites (also called Kindred), are descendants of Caine (the Biblical Cain), cursed with a thirst for blood, vulnerability to sunlight and immortality. They are forever subject to the Beast, their raging animal urges of hunger, fear and rage.
 				Cainites generally live in cities, which are run feudally by Princes; life in a city is one of constant political manipulation and paranoia, as the powers of the city vie for power, control and food. They are creatures ruled by fear, most importantly the fear of exposure to the Kine, everyday humanity.</p>
 			</div>
 		</div>
 
-		<div class="config selecionado">
+		<div class="config">
 			<img src="assets/img/bgMage.jpg" alt="Background Mage" class="bg_img">
 			<div class="conteudo">
 				<i class="logo"></i>
@@ -64,7 +64,7 @@ include('protect.php');
 
 	<ul class="button_list">
 		<li>
-			<button class="button_icon">
+			<button class="button_icon selecionado">
 				<img src="assets/img/buttonWere.webp" alt="Werewolf Button" class="icon">
 			</button>
 		</li>
@@ -76,12 +76,11 @@ include('protect.php');
 		</li>
 
 		<li>
-			<button class="button_icon selecionado">
+			<button class="button_icon">
 				<img src="assets/img/buttonMage.png" alt="Mage Button" class="icon">
 			</button>
 		</li>
 	</ul>
-
 	<script src="assets/js/home_page.js"></script>
 </body>
 </html>
