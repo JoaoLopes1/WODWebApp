@@ -116,24 +116,25 @@ if($funilResult) {
 		</div>
 	</header>
 
-    <p>Bem Vindo, <?php echo $_SESSION['userNAME']; ?></p>
-    <div class= "profileElements"><img src="<?php echo $pathAtual?>" alt="" class="userProfileImage">
-        <form method="POST" enctype="multipart/form-data" action="">
-            <label>Usuário:</label>
-            <input type="text" value="<?php echo $_SESSION['userNAME']?>">
-            <br>
-            <div class="arquivoImagem">
-                <label for="inputArquivo">Imagem</label>
-                <input name="inputArquivo" type="file" id="inputArquivo">
-                <button type="submit">Salvar</button>
-            </div>
-        </form>
-        <section>
-            <p>Character's 0/10</p>
-            <p>Chronicles 0/6</p>
-        </section>
-        <a href="logout.php">Desconectar</a>
-    </div>
+    <main>
+        <div class= "profileElements"><img src="<?php echo $pathAtual?>" alt="" class="userProfileImage">
+            <form method="POST" enctype="multipart/form-data" action="">
+                <label>Usuário:</label>
+                <input type="text" value="<?php echo $_SESSION['userNAME']?>">
+                <br>
+                <div class="arquivoImagem">
+                    <label for="inputArquivo">Imagem</label>
+                    <input name="inputArquivo" type="file" id="inputArquivo">
+                    <button type="submit">Salvar</button>
+                </div>
+            </form>
+            <section>
+                <p>Character's 0/10</p>
+                <p>Chronicles 0/6</p>
+            </section>
+            <a href="logout.php">Desconectar</a>
+        </div>
+    </main>
     <script src="assets/js/home_page.js"></script>
 </body>
 </html>
