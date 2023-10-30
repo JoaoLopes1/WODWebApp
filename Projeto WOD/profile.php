@@ -123,8 +123,8 @@ if($funilResult) {
                 <input type="text" value="<?php echo $_SESSION['userNAME']?>">
                 <br>
                 <div class="arquivoImagem">
-                    <label for="inputArquivo">Imagem</label>
-                    <input name="inputArquivo" type="file" id="inputArquivo">
+                    <label for="arquivo">Imagem</label>
+                    <input name="arquivo" type="file" id="arquivo">
                     <button type="submit">Salvar</button>
                 </div>
             </form>
