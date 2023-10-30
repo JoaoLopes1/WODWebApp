@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 include('protect.php');
 include('php/conexao.php');
 $nomeLOGADO = $_SESSION['userNAME'];
@@ -126,7 +126,7 @@ if (isset($_POST["username"])) {
 mysqli_close($mysqli);
 
 
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -140,24 +140,43 @@ mysqli_close($mysqli);
 
 </head>
 <body>
-    
-    <p>Bem Vindo, <?php echo $_SESSION['userNAME']; ?></p>
-    <div class= "profileElements"><p>Imagem de Perfil:</p><img src="<?php echo $pathAtual?>" alt="" class="userProfileImage">
-        <form method="POST" enctype="multipart/form-data" action="">
-            <p><label>Mudar Imagem: </label>
-                <input name="arquivo" type="file" id="inputArquivo"></p>
-            <button type="submit">Salvar</button>
-        </form>
-        <form method="POST" action="">
-        <label for="newUsername">Mudar Usuário:</label>
-        <input type="text" name="newUsername" id="newUsername" value="<?php echo $_SESSION['userNAME']?>" required>
-        <button type="submit" name="changeUsername">Mudar Usuário</button>
-</form>
+    <section id="background_image" ></section>
+    <header>
+		<div class="container">
+			<div class="topnav">
+				<a href="home_page.php">Home</a>
+				<a href="https://whitewolf.fandom.com/wiki/World_of_Darkness" target="_blank">Wiki</a>
+				<a href="chars.php">Char's</a>
+				<a href="choricle.php">Chronicles</a>
+				<a href="profile.php" >Profile</a>
+			</div>
+		</div>
+	</header>
 
-    </div>
+    <main>
+        <div class= "profileElements"><img src="<?php echo $pathAtual?>" alt="" class="userProfileImage">
+            <form method="POST" enctype="multipart/form-data" action="">
+                <label>Usuário:</label>
+                <br>
+                <div class="arquivoImagem">
+                    <label for="arquivo">Imagem</label>
+                    <input name="arquivo" type="file" id="arquivo">
+                    <button type="submit">Salvar</button>
+                </div>
+                </form>
+                <form method="POST" action="">
+                    <label for="newUsername">Mudar Usuário:</label>
+                    <input type="text" name="newUsername" id="newUsername" value="<?php echo $_SESSION['userNAME']?>" required>
+                    <button type="submit" name="changeUsername">Mudar Usuário</button>
+                </form>
 
-    <p><a href="logout.php">Desconectar</a></p>
-
+            <section>
+                <p>Character's 0/10</p>
+                <p>Chronicles 0/6</p>
+            </section>
+            <a href="logout.php">Desconectar</a>
+        </div>
+    </main>
     <script src="assets/js/home_page.js"></script>
 </body>
 </html>
