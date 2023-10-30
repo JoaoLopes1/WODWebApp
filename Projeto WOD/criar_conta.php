@@ -43,12 +43,12 @@
                     echo"Erro:";
 
                 }
-                mysqli_close($conexao);
                 header("Location: index.php");
             }
 
     }
 }     
+mysqli_close($conexao);
 ?>
 
 <!DOCTYPE html>

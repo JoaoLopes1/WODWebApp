@@ -83,3 +83,19 @@ form {
     align-items: center;
     background-image: url(../img/bgWere.jpg);
 }
+
+@media screen and (max-width: 768px) {
+    #background_image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+    }}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    #background_image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+    }}

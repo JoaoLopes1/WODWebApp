@@ -2,6 +2,32 @@
 include('protect.php');
 include('php/conexao.php');
 $nomeLOGADO = $_SESSION['userNAME'];
+$quantidade_userNAME = 1; 
+$newUsername = $_SESSION['userNAME'];
+
+if (isset($_POST["newUsername"])) {
+    $newUsername = $_POST["newUsername"];
+    
+
+        $sql_user = "SELECT * FROM login WHERE userNAME = '$newUsername'";
+        $sql_query2 = $mysqli->query($sql_user) or ("Falha na execução do código SQL:".mysqli_error($mysqli));
+        $quantidade_userNAME = $sql_query2->num_rows;
+    }
+
+    if($quantidade_userNAME ==1) {
+    }
+    
+    else{
+        // Verifique se houve um erro ao executar a consulta SQL
+        if ($mysqli->query("UPDATE login SET userNAME = '$newUsername' WHERE userNAME = '$nomeLOGADO'")) {
+            echo "Username atualizado com sucesso.";
+            // Atualize a variável de sessão para refletir o novo nome de usuário, se necessário.
+            $_SESSION['userNAME'] = $newUsername;
+            $nomeLOGADO = $newUsername;
+        } else {
+            echo "Não foi possível atualizar o Username: " . $mysqli->error;
+        }
+    }
 
 // Construa a consulta SQL para selecionar a coluna 'path' onde o 'Name' corresponde ao valor na sessão.
 $query = "SELECT userIMAGEPATH FROM login WHERE userNAME = '$nomeLOGADO'";
@@ -86,7 +112,18 @@ if($funilResult) {
         echo "Erro na consulta: " . $mysqli->error;
 
 }
+if (isset($_POST["username"])) {
+    $newUsername = $_POST["username"];
+    
+    // Verifique se houve um erro ao executar a consulta SQL
+    if ($mysqli->query("UPDATE login SET userNAME = '$newUsername' WHERE userNAME = '$nomeLOGADO'")) {
+        echo "Username atualizado com sucesso.";
+    } else {
+        echo "Não foi possível atualizar o Username: " . $mysqli->error;
+    }
+}
 
+mysqli_close($mysqli);
 
 
 ?>
@@ -109,10 +146,14 @@ if($funilResult) {
         <form method="POST" enctype="multipart/form-data" action="">
             <p><label>Mudar Imagem: </label>
                 <input name="arquivo" type="file" id="inputArquivo"></p>
-                <label>Mudar Usuário:</label>
-            <input type="text" value="<?php echo $_SESSION['userNAME']?>">
             <button type="submit">Salvar</button>
         </form>
+        <form method="POST" action="">
+        <label for="newUsername">Mudar Usuário:</label>
+        <input type="text" name="newUsername" id="newUsername" value="<?php echo $_SESSION['userNAME']?>" required>
+        <button type="submit" name="changeUsername">Mudar Usuário</button>
+</form>
+
     </div>
 
     <p><a href="logout.php">Desconectar</a></p>
