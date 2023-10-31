@@ -4,6 +4,50 @@ require 'protect.php';
 $userID = $_SESSION['userID'];
 $userNAME = $_SESSION['userNAME'];
 $data = mysqli_fetch_assoc(mysqli_query($mysqli, "SELECT * FROM login WHERE userID = $userID"));
+
+$nomeLOGADO = $_SESSION['userNAME'];
+$quantidade_userNAME = 1; 
+$newUsername = $_SESSION['userNAME'];
+
+if (isset($_POST["newUsername"])) {
+    $newUsername = $_POST["newUsername"];
+    
+    // Verifique se o campo "newUsername" está vazio
+    if (!empty($newUsername)) {
+        $sql_user = "SELECT * FROM login WHERE userNAME = '$newUsername'";
+        $sql_query2 = $mysqli->query($sql_user) or die("Falha na execução do código SQL: " . mysqli_error($mysqli));
+        $quantidade_userNAME = $sql_query2->num_rows;
+
+        if ($quantidade_userNAME == 1) {
+            // Usuário já existe, faça algo aqui
+        } else {
+            // Atualize o nome de usuário
+            if ($mysqli->query("UPDATE login SET userNAME = '$newUsername' WHERE userNAME = '$nomeLOGADO'")) {
+                //echo "Username atualizado com sucesso.";
+                // Atualize a variável de sessão para refletir o novo nome de usuário, se necessário.
+                $_SESSION['userNAME'] = $newUsername;
+                $nomeLOGADO = $newUsername;
+            } else {
+                //echo "Não foi possível atualizar o Username: " . $mysqli->error;
+            }
+        }
+    } else {
+        //echo "O campo 'newUsername' está vazio. Por favor, insira um novo nome de usuário.";
+    }
+}
+
+if (isset($_POST["username"])) {
+    $newUsername = $_POST["username"];
+    
+    // Verifique se houve um erro ao executar a consulta SQL
+    if ($mysqli->query("UPDATE login SET userNAME = '$newUsername' WHERE userNAME = '$nomeLOGADO'")) {
+        //echo "Username atualizado com sucesso.";
+    } else {
+        //echo "Não foi possível atualizar o Username: " . $mysqli->error;
+    }
+}
+
+mysqli_close($mysqli);
 ?>
 
 <!DOCTYPE html>
@@ -110,11 +154,15 @@ $data = mysqli_fetch_assoc(mysqli_query($mysqli, "SELECT * FROM login WHERE user
 
         <div class="area_infos">
             <div class="user_area">
-                <form class="" method="POST" action="">
+                <form class="" method="POST" action="" id="usernameFORM">
                     <label>Usuário:</label>
                     <input type="text" name="newUsername" id="newUsername" value="<?php echo $_SESSION['userNAME']?>" required>
-                    <button type="submit" name="changeUsername" class="submit button">Submit</button>
                 </form>
+                <script type="text/javascript">
+                    document.getElementById("newUsername").onchange = function() {
+                        document.getElementById("usernameFORM").submit();
+                    };
+                </script>
             </div>
 
             <div class="char_chron">
