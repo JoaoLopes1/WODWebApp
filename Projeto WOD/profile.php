@@ -47,7 +47,6 @@ if (isset($_POST["username"])) {
     }
 }
 
-mysqli_close($mysqli);
 ?>
 
 <!DOCTYPE html>
