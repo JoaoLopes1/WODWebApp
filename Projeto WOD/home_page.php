@@ -26,7 +26,7 @@ include('protect.php');
 				<a href="https://whitewolf.fandom.com/wiki/World_of_Darkness" target="_blank">Wiki</a>
 				<a href="chars.php">Char's</a>
 				<a href="choricle.html">Chronicles</a>
-				<a href="profile2.php" >Profile</a>
+				<a href="profile.php" >Profile</a>
 			</div>
 		</div>
 	</header>
