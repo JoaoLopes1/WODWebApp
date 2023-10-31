@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+@font-face {
+    font-family: Darkness;
+    src: url(../img/fonts/cw_oldwd.ttf)
+}
+
+@font-face {
+    font-family: Akira;
+    src: url(../img/fonts/AKIRA___.ttf)
+}
+
+@font-face {
+    font-family: Bergel;
+    src: url(../img/fonts/BERGELL.TTF)
+}
+
+:root {
+    --cor-primaria: #1B1A17;
+    --cor-secundaria: #B4B4B3;
+    --cor-terciaria: white;
+    --cor-hover: #272727;
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+    --fonte-terciaria: Darkness;
+    --fonte-quarternaria: Bergel;
+    --fonte-quinternaria: Akira;
+}
+
+/* Display inteiro do "modal"*/
+.profileElements { 
+    position: fixed;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    width: 650px;
+    height: 400px;
+    background-color: #0b142d;
+    border-radius: 10px;
+    opacity: 0.9;
+     border: 4px solid #0b1f46;
+}
+
+.ATUALIZAR_PROFILE_NAO_MEXER {
+    display: flex;
+    flex-direction: column;
+    border:  green;
+    align-items: center;
+    width: 35%;
+}
+
+.div_userIMAGE {
+    margin-top: 50px;
+}
+
+.div_logout {
+    display: flex;
+    margin-top: 150px;
+}
+
+/* Input para colocar o seu  usuário*/
+.user_area input{
+    color: #fff;
+    background-color: #5174c5;
+    border-radius: 15px;
+    font-family: var(--fonte-secundaria);
+    font-size: 12px;
+    font-weight: 550;
+    height: 25px;
+    margin-left: 20px;
+    border-color: #9db4e9;
+    text-align: center;
+    
+}
+
+.user_area input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(170, 169, 169);
+    border: solid 2px #829ad1;
+}
+
+/* Texto "Usuário" no display do usuario*/
+.user_area label{
+    display: block;
+    font-family: var(--fonte-secundaria);
+    font-size: 16px;
+    font-weight: 550;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+/* Botão de salvar o usuário*/
+.user_area button{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #FFFFFF;
+    background-color: #5174c5;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #9db4e9;
+    font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+/* Display do botao desconectar */
+.desconectar {
+    color: #FFFFFF;
+    background-color: #5174c5;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid #9db4e9;
+    font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+    font-weight: 550;
+    text-decoration: none;
+    padding-block: 4px; 
+
+}
+
+/* hover dos botoes */
+.user_area button:hover, .desconectar:hover {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: solid 2px #829ad1;
+}
+
+/* testes */
+.area_infos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border:  purple;
+}
+
+.user_area {
+    position: relative; /* Torna o posicionamento relativo para que possamos posicionar o botão */
+    width: 95%;
+    height: 45%;
+    flex: 1;
+    background-color: #0b1f46;
+    margin: 10px 0;
+    border-radius: 10px;
+    margin-top: 20px;
+    border:   red;
+
+}
+
+.char_chron {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    width: 95%;
+    height: 45%;
+    font-family: var(--fonte-secundaria);
+    font-size: 16px;
+    font-weight: 550;
+    margin-bottom: 20px;
+    background-color: #0b1f46; 
+    margin: 10px 0;
+    border-radius: 10px;
+    border:  red;
+}
+
+.char_chron p{
+    margin-top: 15px;
+}
+
+.inner_div {
+    width: 50%;
+    height: 100%;
+}
+
+
+/* Nav Bar */
+.container {
+    position: absolute;
+    margin: 0 1vh 0 0;
+    z-index: 2;
+    background-color: rgba(11, 20, 45, 0.8);
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #0b1f46;
+}
+
+.topnav {
+    overflow: hidden;
+width: 100vw;
+display: flex;
+gap: 12vw;
+justify-content: center;
+}
+  
+.topnav a {
+    float: left;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-family: var(--fonte-quinternaria);
+    
+}
+
+.topnav a:hover {
+    transform: scale(1.2);
+}
+
+body {
+    background-color: black;
+}
+
+#background_image {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/bgProfile.jpg);
+    z-index: -1;
+}
+
+
+/* A PARTIR DAQUI STYLE DO SISTEMA DE ICONES */
+.userIMAGE {
+    width: 125px;
+    height: 125px;
+}
+
+.upload{
+    width: 125px;
+    position: relative;
+    margin: auto;
+}
+
+.upload img{
+    border-radius: 50%;
+    border: 8px solid #0b1f46;
+}
+
+.upload .img_input{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #0b1f46;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.upload .img_input:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.upload .img_input input[type = "file"]{
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type=file]::-webkit-file-upload-button{
+    cursor: pointer;
+}
