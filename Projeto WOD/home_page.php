@@ -58,7 +58,7 @@ include('protect.php');
 			<div class="conteudo">
 				<h2 class="setting">Vampire: The Masquerade</h2>
 				<p class="descricao" class="vampiro">The Cainites (also called Kindred), are descendants of Caine (the Biblical Cain), cursed with a thirst for blood, vulnerability to sunlight and immortality. They are forever subject to the Beast, their raging animal urges of hunger, fear and rage.
-				Cainites generally live in cities, which are run feudally by Princes; life in a city is one of constant political manipulation and paranoia, as the powers of the city vie for power, control and food. They are creatures ruled by fear, most importantly the fear of exposure to the Kine, everyday humanity.</p>
+				Cainites generally live in cities, which are run feudally by Princes; life in a city is one of constant political manipulation and paranoia, as the powers of the city vie for power, control and food.</p>
 			</div>
 		</div>
 

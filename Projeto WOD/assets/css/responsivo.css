@@ -158,7 +158,7 @@
 }
 
 /* Para dispositivos com altura muito pequena, o texto esta invadindo os botões */
-@media (max-height: 768px) { 
+@media (max-height: 768px) and (max-width: 900px){ 
 
     .conteudo {
         position: absolute;
