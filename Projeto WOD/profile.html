@@ -154,21 +154,20 @@ mysqli_close($mysqli);
 	</header>
 
     <main>
-        <div class= "profileElements"><img src="<?php echo $pathAtual?>" alt="" class="userProfileImage">
-            <form method="POST" enctype="multipart/form-data" action="">
-                <label>Usuário:</label>
-                <br>
-                <div class="arquivoImagem">
+        <div class= "profileElements">
+            <img src="<?php echo $pathAtual?>" alt="" class="userProfileImage"> <!--COLOCAR DENTRO DA DIV "ARQUIVO IMAGEM" E CENTRALIZAR O BOTAO DISCONNECT-->
+            <div class="arquivoImagem">
+                <form method="POST" enctype="multipart/form-data" action="">
                     <label for="arquivo">Imagem</label>
                     <input name="arquivo" type="file" id="arquivo">
-                    <button type="submit">Salvar</button>
-                </div>
+                    <button type="submit" >Save</button>
                 </form>
-                <form method="POST" action="">
-                    <label for="newUsername">Mudar Usuário:</label>
+            </div>
+            <form class="usuarioInfo" method="POST" action="">
+                <label>Usuário:</label>
                     <input type="text" name="newUsername" id="newUsername" value="<?php echo $_SESSION['userNAME']?>" required>
-                    <button type="submit" name="changeUsername">Mudar Usuário</button>
-                </form>
+                    <button type="submit" name="changeUsername">Submit</button>
+            </form> 
 
             <section>
                 <p>Character's 0/10</p>
