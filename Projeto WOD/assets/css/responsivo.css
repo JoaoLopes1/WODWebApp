@@ -1,0 +1,175 @@
+@media (max-width: 900px) {
+
+/* Display do texto da parte visual */
+.conteudo {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    min-height: 10vh;
+    max-width: 100vw;
+    z-index: 1;
+}
+
+/* Título do texto da parte visual */
+.setting {
+    color: #ffffff;
+    font-family: "Bergel";
+    font-size: 2.8125rem;
+    line-height: 2rem;
+    max-width: 100vw;
+    margin-bottom: 2rem;
+}
+
+/* Descrição do texto da parte visual */
+.descricao {
+    color: #ffffff;
+    font-family: "Rubik";
+    line-height: 1.75rem;
+    max-width: 60vw;
+    font-size: 1.125rem;
+}
+
+/* Botões laterais, que selecionam a parte visual */
+.button_list {
+    top: 85%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    min-height: 15vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Display dos botões laterais */
+.button_icon {
+    border: none;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Transform do botão lateral selecionado */
+.button_icon.selecionado {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px var(--cor-primaria);
+}
+
+/* Tamanho dos botões laterais */
+.icon {
+    border-radius: 50%;
+    width: 90px;
+    height: 86px;
+}
+
+
+    /* Display da lista dos links */
+    .nav-menu {
+        position: fixed;
+        left: 0%;
+        top: -100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.5s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Display da lista dos links quando ativa */
+    .nav-menu.active {
+        top: 10%;
+        z-index: 2;
+    }
+
+    /* Display do Home e do hamburger */
+    .navbar {
+        gap: 60vw;
+    }
+
+    /* Display do link */
+    .nav-item {
+        margin: 1.75rem 0;
+    }
+
+    /* Display das barrinhas da navbar "hamburger" */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+/* Display do texto da parte visual */
+.conteudo {
+    padding: 0 0 0 0;
+    position: absolute;
+    top: 35%;
+    left: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    min-height: 10vh;
+    max-width: 100vw;
+    z-index: 1;
+}
+
+/* Título do texto da parte visual */
+.setting {
+    color: #ffffff;
+    font-family: "Bergel";
+    font-size: 2.8125rem;
+    line-height: 2rem;
+    max-width: 80vw;
+    margin-bottom: 2rem;
+}
+
+/* Descrição do texto da parte visual */
+.descricao {
+    color: #ffffff;
+    font-family: "Rubik";
+    line-height: 1.75rem;
+    max-width: 80vw;
+    font-size: 1.125rem;
+}
+
+}
+
+/* Para dispositivos com altura muito pequena, o texto esta invadindo os botões */
+@media (max-height: 768px) { 
+
+    .conteudo {
+        position: absolute;
+        top: 10%;
+        left: 12%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        min-height: 10vh;
+        max-width: 100vw;
+        z-index: 1;
+    }
+}
