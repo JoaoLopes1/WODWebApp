@@ -183,39 +183,6 @@
 }
 
 
-/* Nav Bar */
-.container {
-    position: absolute;
-    margin: 0 1vh 0 0;
-    z-index: 2;
-    background-color: rgba(11, 20, 45, 0.8);
-    height: 8vh;
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid #0b1f46;
-}
-
-.topnav {
-    overflow: hidden;
-width: 100vw;
-display: flex;
-gap: 12vw;
-justify-content: center;
-}
-  
-.topnav a {
-    float: left;
-    color: #FFFFFF;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.75rem;
-    font-family: var(--fonte-quinternaria);
-    
-}
-
-.topnav a:hover {
-    transform: scale(1.2);
-}
 
 body {
     background-color: black;
@@ -278,3 +245,117 @@ body {
 input[type=file]::-webkit-file-upload-button{
     cursor: pointer;
 }
+
+
+/* Display da navbar */
+.header{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    width: 100vw;
+    gap: 12vw;
+    overflow: hidden;
+    z-index: 2;
+    top: 2%;
+}
+
+/* Display dos links da navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+/* Display das barrinhas da navbar "hamburger" */
+.hamburger {
+    display: none;
+}
+
+/* Barras */
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/* Display da lista dos links */
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Display do link */
+.nav-item {
+    margin-left: 5rem;
+}
+
+/* Link */
+.nav-link{
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: var(--fonte-quinternaria);
+}
+
+/* Hover dos itens */
+.nav-item:hover{
+    transform: scale(1.1);
+}
+
+/* Botão Home na navbar */
+.nav-logo {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: var(--fonte-quinternaria);
+}
+
+/* Hover do home */
+.nav-logo:hover{
+    transform: scale(1.1);
+}
+
+
+/* Nav Bar  Antiga*/
+/* .container {
+    position: absolute;
+    margin: 0 1vh 0 0;
+    z-index: 2;
+    background-color: rgba(11, 20, 45, 0.8);
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #0b1f46;
+}
+
+.topnav {
+    overflow: hidden;
+width: 100vw;
+display: flex;
+gap: 12vw;
+justify-content: center;
+}
+    
+.topnav a {
+    float: left;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-family: var(--fonte-quinternaria);
+    
+}
+
+.topnav a:hover {
+    transform: scale(1.2);
+} */

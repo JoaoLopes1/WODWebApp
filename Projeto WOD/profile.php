@@ -61,16 +61,29 @@ if (isset($_POST["username"])) {
 </head>
 <body>
 <section id="background_image" ></section>
-    <header>
-		<div class="container">
-			<div class="topnav">
-				<a href="home_page.php">Home</a>
-				<a href="https://whitewolf.fandom.com/wiki/World_of_Darkness" target="_blank">Wiki</a>
-				<a href="chars.php">Char's</a>
-				<a href="choricle.php">Chronicles</a>
-				<a href="profile.php" >Profile</a>
-			</div>
-		</div>
+<header class="header">
+        <nav class="navbar">
+            <a href="home_page.php" class="nav-logo">Home</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="https://whitewolf.fandom.com/wiki/World_of_Darkness" class="nav-link">Wiki</a>
+                </li>
+                <li class="nav-item">
+                    <a href="chars.php" class="nav-link">Char's</a>
+                </li>
+                <li class="nav-item">
+                    <a href="choricle.html" class="nav-link">Chronicles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="profile.php" class="nav-link">Profile</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
 	</header>
     <div class= "profileElements">
         <div class="ATUALIZAR_PROFILE_NAO_MEXER">
