@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/criacao_char.css">
+    <title>Conceito</title>
+</head>
+<body>
+    <section class="bg_img"></section>
+    <header class="header">
+        <nav class="navbar">
+            <a href="home_page.php" class="nav-logo">Home</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="https://whitewolf.fandom.com/wiki/World_of_Darkness" class="nav-link">Wiki</a>
+                </li>
+                <li class="nav-item">
+                    <a href="chars.php" class="nav-link">Char's</a>
+                </li>
+                <li class="nav-item">
+                    <a href="choricle.html" class="nav-link">Chronicles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="profile.php" class="nav-link">Profile</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+	</header>
+    
+    <div class="fade">
+        <div class="base_centro">
+            <div class="centro">
+                <div class="tbody">
+                    <h1>Choose Your Concept</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, placeat! Ut est neque quibusdam eveniet officiis consequatur facere, explicabo corporis esse fuga. Nobis obcaecati totam dolorum error veniam, omnis sint.</p>
+                </div>
+
+                <div class="bbody">
+                  
+                </div>
+
+            </div>
+            <div class="aside">
+                <div class="navigate_buttn">
+                    <button><</button>
+                    <button>1</button>
+                    <button>></button></div>
+                <ul>
+                    <li><a href=""><img src="" alt="Concept"></a></li>
+                    <li><a href=""><img src="" alt="Tradition"></a></li>
+                    <li><a href=""><img src="" alt="Essence"></a></li>
+                    <li><a href=""><img src="" alt="Nature"></a></li>
+                    <li><a href=""><img src="" alt="Next"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+</body>
+</html>

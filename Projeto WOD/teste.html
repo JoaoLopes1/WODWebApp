@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Compra de Pontos</title>
+    <style>
+        /* Adicione estilos conforme necessário */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>PONTOS QUE RESTAM: <span id="pontosRestantes">7</span></h2>
+    <ul id="listaAtributos">
+        <!-- Os atributos serão adicionados aqui dinamicamente com JavaScript -->
+    </ul>
+
+    <script>
+        const atributos = [
+            "Aliados", "Arcano", "Avatar", "Biblioteca", "Contatos",
+            "Destino", "Influência", "Nodo", "Recursos", "Sonhos", "Talismã"
+        ];
+
+        let pontosRestantes = 7;
+
+        const listaAtributos = document.getElementById("listaAtributos");
+        const pontosRestantesElement = document.getElementById("pontosRestantes");
+
+        function criarElementoAtributo(atributo, valorAtual) {
+            const li = document.createElement("li");
+
+            const incrementar = () => {
+                if (pontosRestantes > 0 && valorAtual < 5) {
+                    pontosRestantes--;
+                    valorAtual++;
+                    atualizarPainel();
+                }
+            };
+
+            const decrementar = () => {
+                if (valorAtual > 0) {
+                    pontosRestantes++;
+                    valorAtual--;
+                    atualizarPainel();
+                }
+            };
+
+            li.innerHTML = `
+                ${atributo}
+                <button onclick="incrementar()">+</button>
+                <span>${valorAtual}</span>
+                <button onclick="decrementar()">-</button>
+            `;
+
+            return li;
+        }
+
+        function atualizarPainel() {
+            listaAtributos.innerHTML = "";
+            atributos.forEach(atributo => {
+                const li = criarElementoAtributo(atributo, 0);
+                listaAtributos.appendChild(li);
+            });
+            pontosRestantesElement.textContent = pontosRestantes;
+        }
+
+        atualizarPainel();
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/criacao_char.css">
+    <title>Conceito</title>
+</head>
+<body>
+    <section class="bg_img"></section>
+    <header class="header">
+        <nav class="navbar">
+            <a href="../home_page.php" class="nav-logo">Home</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="https://whitewolf.fandom.com/wiki/World_of_Darkness" class="nav-link">Wiki</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../chars.php" class="nav-link">Char's</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../choricle.html" class="nav-link">Chronicles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../profile.php" class="nav-link">Profile</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+	</header>
+    
+    <div class="fade">
+        <div class="base_centro">
+            <div class="aside">
+                <div class="navigate_buttn">
+                    <button><</button>
+                    <button>1</button>
+                    <button>></button>
+                </div>
+                <ul>
+                    <li><a href="tradition.html"><button>T</button></a></li>
+                    <li><a href="essence.html"><button>E</button></a></li>
+                    <li><a href="arquetipo.html"><button>A</button> </a></li>
+                    <li><a href=""><button>></button></a></li>
+                </ul>
+            </div>
+            <div class="centro">
+                <div class="tbody">
+                    <h1>Choose Your Archetype</h1>
+                    <p style="text-align: center;">Archetypes are descriptive personality types. All of them show you, your character's strenghs and flaws.</p>
+                </div>
+
+                <div class="bbody">
+                    <div class="content_column">
+                        <!-- 1 -->
+                         <div>
+                             <div class="card">
+                                 <button class="collapsible">  The Akashic Brotherhood 
+                                     <div class="tooltip">
+                                         &#9432;
+                                         <span class="tooltiptext">
+                                             Bonus: Mind +1 <br>                                                   
+                                         </span>
+                                     </div>
+                                 </button>
+                                 
+                                 <div class="content">
+                                     <p>
+                                         The Akashic Brotherhood or just the Akashayana, is a Tradition of mages masters of mind, body, and spirit pursuing the arts of personal discipline.  <a href="https://whitewolf.fandom.com/wiki/Akashic_Brotherhood"> Know More</a>
+                                     </p>
+                                 </div>
+                             </div>
+                         </div>
+ 
+                         <!-- 2 -->
+                         <div>
+                             <div class="card">
+                                 <button class="collapsible"> Celestial Chorus
+                                     <div class="tooltip">
+                                         &#9432;
+                                         <span class="tooltiptext">
+                                             Bonus: Prime +1 <br>                                                   
+                                         </span>
+                                     </div>
+                                 </button>
+                                 <div class="content">
+                                     <p>The Celestial Chorus is a Tradition of mages united by their efforts to touch the Divine as well as their belief in the One and Prime from which all originate. <br><a href="https://whitewolf.fandom.com/wiki/Celestial_Chorus"> Know More</a></p>
+                                 </div>
+                             </div>
+                         </div>
+ 
+                         <!-- 3 -->
+                         <div>
+                             <div class="card">
+                                 <button class="collapsible">The Cult of Ecstasy
+                                     <div class="tooltip">
+                                         &#9432;
+                                         <span class="tooltiptext">
+                                             Bonus: Time +1 <br>                                                   
+                                         </span>
+                                 </button>
+                                 <div class="content">
+                                     <p>The Cult of Ecstasy is a Tradition of mages who uses things like drugs, music and sex, to achieve a mental state that transcends the physical world. <a href="https://whitewolf.fandom.com/wiki/Cult_of_Ecstasy">Know More</a> </p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const coll = document.querySelectorAll('.collapsible');
+        coll.forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

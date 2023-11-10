@@ -156,7 +156,7 @@ if (isset($_POST["username"])) {
                 echo
                 "
                 <script>
-                document.location.href = 'profile2.php';
+                document.location.href = 'profile.php';
                 </script>
                 ";
                 }}

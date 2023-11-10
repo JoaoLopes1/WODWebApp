@@ -12,6 +12,7 @@ include('protect.php');
 <body>
     Bem Vindo ao CHARS, <?php echo $_SESSION['userNAME']; ?>
 
+    <a href="char_create1/tradition.html">Criar</a> Personagem
 <p>
     <a href="logout.php">Sair</a>
 </p>

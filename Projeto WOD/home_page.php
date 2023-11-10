@@ -22,10 +22,10 @@ include('protect.php');
 <body>
 	<header class="header">
         <nav class="navbar">
-            <a href="index.html" class="nav-logo">Home</a>
+            <a href="home_page.php" class="nav-logo">Home</a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="https://whitewolf.fandom.com/wiki/World_of_Darkness" class="nav-link">Wiki</a>
+                    <a href="https://whitewolf.fandom.com/wiki/World_of_Darkness" class="nav-link" target="_blank">Wiki</a>
                 </li>
                 <li class="nav-item">
                     <a href="chars.php" class="nav-link">Char's</a>

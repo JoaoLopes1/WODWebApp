@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/criacao_char.css">
+    <title>Conceito</title>
+</head>
+<body>
+    <section class="bg_img"></section>
+    <header class="header">
+        <nav class="navbar">
+            <a href="../home_page.php" class="nav-logo">Home</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="https://whitewolf.fandom.com/wiki/World_of_Darkness" class="nav-link">Wiki</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../chars.php" class="nav-link">Char's</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../choricle.html" class="nav-link">Chronicles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../profile.php" class="nav-link">Profile</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+	</header>
+    
+    <div class="fade">
+        <div class="base_centro">
+            <div class="aside">
+                <div class="navigate_buttn">
+                    <button><</button>
+                    <button>1</button>
+                    <button>></button></div>
+                <ul>
+                    <li><a href="tradition.html"><button>T</button></a></li>
+                    <li><a href="essence.html"><button>E</button></a></li>
+                    <li><a href="arquetipo.html"><button>A</button> </a></li>
+                    <li><a href=""><button>></button></a></li>
+                </ul>
+            </div>
+            <div class="centro">
+                <div class="tbody">
+                    <h1>Choose Your Essence</h1>
+                    <p>The Avatar is the portion of an individual's soul which is the source of an Awakened mage's ability to perform magic, and which grants the possibility of Ascension. Each Avatar has an Essence. These describe the Avatar's nature, as well as the way in which the Avatar seeks Ascension. An Avatar's Essence usually, though not always, complements the mage's own desires and outlook on magic and life. </p>
+                </div>
+                <div class="bbody essences">
+                  
+                    <div class="content_rows">
+                        <div class="dinamico">
+                            <h2>Dynamic</h2>
+                            <p> A mage with a Dynamic Avatar would say that nothing is static, everything must change. <br>Such mages are aligned with the cosmic principle of Dynamism, and feel a deep urge to create, innovate, and pursue novelty. <br>Mages who have succumbed to the most extreme and imbalanced form of Dynamism are known as Marauders. </p>
+                        </div>
+                        <div class="padrao">
+                            <h2>Pattern</h2>
+                            <p>A mage with a Pattern Avatar would say that strength comes from order and stability. <br>Such mages are aligned with the cosmic principle of Stasis, and feel a deep urge to protect and preserve what they perceive as valuable. <br>The mages who have succumbed to the most extreme and imbalanced form of Stasis are the technocrats known as Threat Null. </p>
+                        </div>
+                    </div>
+
+                    <div class="content_rows">
+                        <div class="primordial">
+                            <h2>Primordial</h2>
+                            <p>A mage with a Primordial Avatar subconsciously remembers the most primordial of times: the supreme tranquility of the time before Creation began.  <br>The ugliest parts of existence fill the Primordial mage with the urge to purge away that ugliness and restore a small measure of the primordial tranquility to current human existence. <br>Such mages are aligned with the cosmic principle of Entropy, and feel a deep urge to purify existence by purging away the ugliest parts. <br>Mages who have succumbed to the most extreme and imbalanced form of Entropy are known as Nephandi. </p>
+                        </div>
+                        <div class="investigador">
+                            <h2>Questing</h2>
+                            <p>A mage with a Questing Avatar would say that purpose comes from the seeking and accomplishing of goals. <br>Whereas the other three Essences are manifestations of fundamental cosmic principles, a Questing mage feels a deep urge to pursue the central concept itself which gives the three cosmic principles their direction: Quality. <br>A Questing mage perpetually perceives a state of higher quality, and is ever questing toward it. Questing mages are the glue who seek to harmonize and balance the other mages and forces. </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+</body>
+</html>
