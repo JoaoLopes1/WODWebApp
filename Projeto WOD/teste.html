@@ -3,83 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Compra de Pontos</title>
+    <title>Document</title>
     <style>
-        /* Adicione estilos conforme necessário */
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        button {
-            margin-left: 10px;
+        .card {
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
         }
     </style>
 </head>
 <body>
-    <h2>PONTOS QUE RESTAM: <span id="pontosRestantes">7</span></h2>
-    <ul id="listaAtributos">
-        <!-- Os atributos serão adicionados aqui dinamicamente com JavaScript -->
-    </ul>
+    <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Search for names..">
+    <div class="card" id="card1">
+        <h2>John Doe</h2>
+    </div>
 
+    <div class="card" id="card2">
+        <h2>Jane Doe</h2>
+    </div>
+    
     <script>
-        const atributos = [
-            "Aliados", "Arcano", "Avatar", "Biblioteca", "Contatos",
-            "Destino", "Influência", "Nodo", "Recursos", "Sonhos", "Talismã"
-        ];
-
-        let pontosRestantes = 7;
-
-        const listaAtributos = document.getElementById("listaAtributos");
-        const pontosRestantesElement = document.getElementById("pontosRestantes");
-
-        function criarElementoAtributo(atributo, valorAtual) {
-            const li = document.createElement("li");
-
-            const incrementar = () => {
-                if (pontosRestantes > 0 && valorAtual < 5) {
-                    pontosRestantes--;
-                    valorAtual++;
-                    atualizarPainel();
+        function filterCards() {
+        var input, filter, cards, cardTitle, i;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        cards = document.getElementsByClassName("card");
+        
+        for (i = 0; i < cards.length; i++) {
+            cardTitle = cards[i].getElementsByTagName("h2")[0];
+            if (cardTitle) {
+                var title = cardTitle.innerHTML;
+                if (title.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
                 }
-            };
-
-            const decrementar = () => {
-                if (valorAtual > 0) {
-                    pontosRestantes++;
-                    valorAtual--;
-                    atualizarPainel();
-                }
-            };
-
-            li.innerHTML = `
-                ${atributo}
-                <button onclick="incrementar()">+</button>
-                <span>${valorAtual}</span>
-                <button onclick="decrementar()">-</button>
-            `;
-
-            return li;
+            }
         }
-
-        function atualizarPainel() {
-            listaAtributos.innerHTML = "";
-            atributos.forEach(atributo => {
-                const li = criarElementoAtributo(atributo, 0);
-                listaAtributos.appendChild(li);
-            });
-            pontosRestantesElement.textContent = pontosRestantes;
-        }
-
-        atualizarPainel();
+    }
     </script>
 </body>
 </html>

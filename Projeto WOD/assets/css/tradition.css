@@ -1,0 +1,60 @@
+/* collapsible start */
+.content {
+    display: none;
+    padding: 10px;
+    width: 340px;
+}
+
+.card {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 340px;
+}
+
+.collapsible {
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.active {
+    display: block;
+}
+
+/* tolltip */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+  /* Dica */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 125px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+p a {
+    color: purple;
+    font-weight: 600;
+}

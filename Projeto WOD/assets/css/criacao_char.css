@@ -197,112 +197,6 @@ p {
     flex-direction: row;
 }
 
-/* collapsible start */
-.collapsible {
-    background-color: #eee;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    box-sizing: border-box;
-}
-
-.content {
-    display: none;
-    padding: 10px;
-    width: 340px;
-}
-
-.card {
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 340px;
-}
-
-.collapsible {
-    background-color: white;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.active {
-    display: block;
-}
-
-/* tolltip */
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
-  /* Dica */
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 125px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: fixed;
-    z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
-
-li img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: purple;
-}
-
-li img:hover {
-    transform: scale(1.1);
-}
-
-.dinamico, .padrao, .primordial, .investigador{
-    background-color: white;
-    color: black;
-    height: 200px;
-    width: 500px;
-    background-color: rgba(255, 255, 255, 1);
-    border: 4px solid #0b1f46;
-    border-radius: 10px;
-    text-align: center;
-    padding: 10px;
-
-}
-
-.primordial, .investigador{
-    height: 235px;
-}
-
-.essences {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-p a {
-    color: purple;
-    font-weight: 600;
-}
-
 .navigate_buttn {
     display: flex;
     flex-direction: row;
@@ -313,8 +207,8 @@ p a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25px; /* Ajuste a largura do botão conforme necessário */
-    height: 25px; /* Ajuste a altura do botão conforme necessário */
+    width: 25px;
+    height: 25px;
     padding: 5px;
     margin: 2px;
     cursor: pointer;
@@ -322,16 +216,12 @@ p a {
     border-radius: 20%;
 }
 
-.navigate_buttn button span {
-    font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
-}
-
 li a button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25px; /* Ajuste a largura do botão conforme necessário */
-    height: 25px; /* Ajuste a altura do botão conforme necessário */
+    width: 25px;
+    height: 25px; 
     padding: 5px;
     border-radius: 50%;
     margin: 2px;

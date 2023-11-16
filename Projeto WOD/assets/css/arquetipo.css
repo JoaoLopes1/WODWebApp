@@ -1,0 +1,52 @@
+.cardb {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.nav_center {
+    border: green solid;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.content_row {
+    border: pink solid;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* collapsible start */
+.content {
+    display: none;
+    padding: 10px;
+    width: 340px;
+}
+
+.card {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 340px;
+}
+
+.collapsible {
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.active {
+    display: block;
+}

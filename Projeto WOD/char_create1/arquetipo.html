@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/criacao_char.css">
+    <link rel="stylesheet" href="../assets/css/arquetipo.css">
     <title>Conceito</title>
 </head>
 <body>
@@ -56,61 +57,49 @@
                 </div>
 
                 <div class="bbody">
-                    <div class="content_column">
-                        <!-- 1 -->
-                         <div>
-                             <div class="card">
-                                 <button class="collapsible">  The Akashic Brotherhood 
-                                     <div class="tooltip">
-                                         &#9432;
-                                         <span class="tooltiptext">
-                                             Bonus: Mind +1 <br>                                                   
-                                         </span>
-                                     </div>
-                                 </button>
-                                 
-                                 <div class="content">
-                                     <p>
-                                         The Akashic Brotherhood or just the Akashayana, is a Tradition of mages masters of mind, body, and spirit pursuing the arts of personal discipline.  <a href="https://whitewolf.fandom.com/wiki/Akashic_Brotherhood"> Know More</a>
-                                     </p>
-                                 </div>
-                             </div>
-                         </div>
- 
-                         <!-- 2 -->
-                         <div>
-                             <div class="card">
-                                 <button class="collapsible"> Celestial Chorus
-                                     <div class="tooltip">
-                                         &#9432;
-                                         <span class="tooltiptext">
-                                             Bonus: Prime +1 <br>                                                   
-                                         </span>
-                                     </div>
-                                 </button>
-                                 <div class="content">
-                                     <p>The Celestial Chorus is a Tradition of mages united by their efforts to touch the Divine as well as their belief in the One and Prime from which all originate. <br><a href="https://whitewolf.fandom.com/wiki/Celestial_Chorus"> Know More</a></p>
-                                 </div>
-                             </div>
-                         </div>
- 
-                         <!-- 3 -->
-                         <div>
-                             <div class="card">
-                                 <button class="collapsible">The Cult of Ecstasy
-                                     <div class="tooltip">
-                                         &#9432;
-                                         <span class="tooltiptext">
-                                             Bonus: Time +1 <br>                                                   
-                                         </span>
-                                 </button>
-                                 <div class="content">
-                                     <p>The Cult of Ecstasy is a Tradition of mages who uses things like drugs, music and sex, to achieve a mental state that transcends the physical world. <a href="https://whitewolf.fandom.com/wiki/Cult_of_Ecstasy">Know More</a> </p>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
+                    <div class="nav_center">
+                        <div class="searchbar"><input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Search for names.."></div>
+                        
+                        <div class="content_row">
+                            
+                            <div class="card" id="card1">
+                                <h2>John Doe</h2>
+                            </div>
+                            
 
+                            <div>
+                                <div class="card" id="card2">
+                                    <button class="collapsible">  
+                                        <h2>SLA OQ AGOTA</h2>
+                                    </button>
+                                
+                                    <div class="content">
+                                        <p>
+                                            The Akashic Brotherhood or just the Akashayana, is a Tradition of mages masters of mind, body, and spirit pursuing the arts of personal discipline.  <a href="https://whitewolf.fandom.com/wiki/Akashic_Brotherhood"> Know More</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="card" id="card3">
+                                    <button class="collapsible">
+                                        <h2> The Akashic Brotherhood</h2>
+                                    </button>
+                                
+                                    <div class="content">
+                                        <p>
+                                            The Akashic Brotherhood or just the Akashayana, is a Tradition of mages masters of mind, body, and spirit pursuing the arts of personal discipline.  <a href="https://whitewolf.fandom.com/wiki/Akashic_Brotherhood"> Know More</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <!-- Additional cards here -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -128,6 +117,26 @@
                 }
             });
         });
+
+        function filterCards() {
+            var input, filter, cards, cardTitle, i;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            cards = document.getElementsByClassName("card");
+
+            for (i = 0; i < cards.length; i++) {
+                cardTitle = cards[i].getElementsByTagName("h2")[0];
+                if (cardTitle) {
+                    var title = cardTitle.innerHTML;
+                    if (title.toUpperCase().indexOf(filter) > -1) {
+                        cards[i].style.display = "";
+                    } 
+                    else {
+                        cards[i].style.display = "none";
+                    }
+                }
+            }
+        }
     </script>
 </body>
 </html>
