@@ -170,11 +170,12 @@ p {
 }
 
 .bbody {
-    border:   red;
+    border: red;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
+    max-height: 90%;
 }
 
 .aside {

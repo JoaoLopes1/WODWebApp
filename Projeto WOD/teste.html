@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .card {
-        border: 1px solid black;
-        margin: 10px;
-        padding: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Click Example</title>
+  <style>
+    .content {
+      display: none;
+    }
+
+    .shown {
+      display: block;
+    }
+  </style>
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
-    <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Search for names..">
-    <div class="card" id="card1">
-        <h2>John Doe</h2>
-    </div>
 
-    <div class="card" id="card2">
-        <h2>Jane Doe</h2>
-    </div>
-    
-    <script>
-        function filterCards() {
-        var input, filter, cards, cardTitle, i;
-        input = document.getElementById("searchInput");
-        filter = input.value.toUpperCase();
-        cards = document.getElementsByClassName("card");
+<!-- Buttons -->
+<button id="card1">Button 1</button>
+<button id="card2">Button 2</button>
+<!-- Add more buttons as needed -->
+
+<!-- Content Divs -->
+<div id="content1" class="content shown">Content 1</div>
+<div id="content2" class="content">Content 2</div>
+<!-- Add more content divs as needed -->
+
+<script>
+  $(document).ready(function() {
+    // Click event for each button
+    for (let i = 1; i <= 30; i++) {
+      $(`#card${i}`).on('click', function() {
+        // Remove 'shown' class from all content divs
+        $('.content').removeClass('shown');
         
-        for (i = 0; i < cards.length; i++) {
-            cardTitle = cards[i].getElementsByTagName("h2")[0];
-            if (cardTitle) {
-                var title = cardTitle.innerHTML;
-                if (title.toUpperCase().indexOf(filter) > -1) {
-                    cards[i].style.display = "";
-                } else {
-                    cards[i].style.display = "none";
-                }
-            }
-        }
+        // Add 'shown' class to the corresponding content div
+        $(`#content${i}`).addClass('shown');
+      });
     }
-    </script>
+  });
+</script>
+
 </body>
 </html>

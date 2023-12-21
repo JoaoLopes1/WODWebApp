@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="../assets/css/criacao_char.css">
     <link rel="stylesheet" href="../assets/css/arquetipo.css">
     <title>Conceito</title>
+    <style>
+        .content {
+          display: none;
+        }
+    
+        .shown {
+          display: block;
+        }
+      </style>
+      <!-- Include jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 <body>
     <section class="bg_img"></section>
@@ -47,7 +59,7 @@
                     <li><a href="tradition.html"><button>T</button></a></li>
                     <li><a href="essence.html"><button>E</button></a></li>
                     <li><a href="arquetipo.html"><button>A</button> </a></li>
-                    <li><a href=""><button>></button></a></li>
+                    <li><a href="../teste.html"><button>></button></a></li>
                 </ul>
             </div>
             <div class="centro">
@@ -58,66 +70,293 @@
 
                 <div class="bbody">
                     <div class="nav_center">
-                        <div class="searchbar"><input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Search for names.."></div>
-                        
-                        <div class="content_row">
-                            
-                            <div class="card" id="card1">
-                                <h2>John Doe</h2>
-                            </div>
-                            
+                      <div class="searchbar">
+                        <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Search for names..">
+                      </div>
+                      
+                      <div class="content_collumn">
+                        <!-- 1 -->
+                        <button class="collapsible card" id="card1"><h2>Arquiteto</h2></button>
+                  
+                        <!-- 2 -->
+                        <button class="collapsible card" id="card2"><h2>Autocrata</h2></button>
+                  
+                        <!-- 3 -->
+                        <button class="collapsible card" id="card3"><h2>Bon Vivant</h2></button>
 
-                            <div>
-                                <div class="card" id="card2">
-                                    <button class="collapsible">  
-                                        <h2>SLA OQ AGOTA</h2>
-                                    </button>
-                                
-                                    <div class="content">
-                                        <p>
-                                            The Akashic Brotherhood or just the Akashayana, is a Tradition of mages masters of mind, body, and spirit pursuing the arts of personal discipline.  <a href="https://whitewolf.fandom.com/wiki/Akashic_Brotherhood"> Know More</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- 4 -->
+                        <button class="collapsible card" id="card4"><h2>Valentão</h2></button>
 
-                            <div>
-                                <div class="card" id="card3">
-                                    <button class="collapsible">
-                                        <h2> The Akashic Brotherhood</h2>
-                                    </button>
-                                
-                                    <div class="content">
-                                        <p>
-                                            The Akashic Brotherhood or just the Akashayana, is a Tradition of mages masters of mind, body, and spirit pursuing the arts of personal discipline.  <a href="https://whitewolf.fandom.com/wiki/Akashic_Brotherhood"> Know More</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- 5 -->
+                        <button class="collapsible card" id="card5"><h2>Samaritano</h2></button>
 
+                        <!-- 6 -->
+                        <button class="collapsible card" id="card6"><h2>Celebrante</h2></button>
+
+                        <!-- 7 -->
+                        <button class="collapsible card" id="card7"><h2>Criança</h2></button>
+
+                        <!-- 8 -->
+                        <button class="collapsible card" id="card8"><h2>Competidor</h2></button>
+
+                        <!-- 9 -->
+                        <button class="collapsible card" id="card9"><h2>Conformista</h2></button>
+
+                        <!-- 10 -->
+                        <button class="collapsible card" id="card10"><h2>Esperto</h2></button>
+
+                        <!-- 11 -->
+                        <button class="collapsible card" id="card11"><h2>Ranzinza</h2></button>
+
+                        <!-- 12 -->
+                        <button class="collapsible card" id="card12"><h2>Excêntrico</h2></button>
+
+                        <!-- 13 -->
+                        <button class="collapsible card" id="card13"><h2>Diretor</h2></button>
+
+                        <!-- 14 -->
+                        <button class="collapsible card" id="card14"><h2>Fanático</h2></button>
+
+                        <!-- 15 -->
+                        <button class="collapsible card" id="card15"><h2>Galante</h2></button>
+
+                        <!-- 16 -->
+                        <button class="collapsible card" id="card16"><h2>Juiz</h2></button>
+
+                        <!-- 17 -->
+                        <button class="collapsible card" id="card17"><h2>Solitário</h2></button>
+
+                        <!-- 18 -->
+                        <button class="collapsible card" id="card18"><h2>Mártir</h2></button>
+
+                        <!-- 19 -->
+                        <button class="collapsible card" id="card19"><h2>Masoquista</h2></button>
+
+                        <!-- 20 -->
+                        <button class="collapsible card" id="card20"><h2>Monstro</h2></button>
+
+                        <!-- 21 -->
+                        <button class="collapsible card" id="card21"><h2>Pedagogo</h2></button>
+
+                        <!-- 22 -->
+                        <button class="collapsible card" id="card22"><h2>Penitente</h2></button>
+
+                        <!-- 23 -->
+                        <button class="collapsible card" id="card23"><h2>Perfeccionista</h2></button>
+
+                        <!-- 24 -->
+                        <button class="collapsible card" id="card24"><h2>Rebelde</h2></button>
+
+                        <!-- 25 -->
+                        <button class="collapsible card" id="card25"><h2>Trapaceiro</h2></button>
+
+                        <!-- 26 -->
+                        <button class="collapsible card" id="card26"><h2>Sobrevivente</h2></button>
+
+                        <!-- 27 -->
+                        <button class="collapsible card" id="card27"><h2>Caçador de Emoções</h2></button>
+
+                        <!-- 28 -->
+                        <button class="collapsible card" id="card28"><h2>Tradicionalista</h2></button>
+
+                        <!-- 29 -->
+                        <button class="collapsible card" id="card29"><h2>Comediante</h2></button>
+
+                        <!-- 30 -->
+                        <button class="collapsible card" id="card30"><h2>Visionário</h2></button>
+                      </div>
+                  
+                      <!-- Additional cards here -->
+                    </div>
+                  
+                    <div class="info">
+                        <!-- 1 -->
+                        <div class="content shown" id="content1">
+                            <h2>Arquiteto</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
                         </div>
-                        
-                        <!-- Additional cards here -->
+                  
+                        <!-- 2 -->
+                        <div class="content" id="content2">
+                            <h2>Autocrata</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="content" id="content3">
+                            <h2>Bon Vivant</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 4 -->
+                        <div class="content" id="content4">
+                            <h2>Valentão</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 5 -->
+                        <div class="content" id="content5">
+                            <h2>Samaritano</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 6 -->
+                        <div class="content" id="content6">
+                            <h2>Celebrante</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 7 -->
+                        <div class="content" id="content7">
+                            <h2>Criança</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 8 -->
+                        <div class="content" id="content8">
+                            <h2>Competidor</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 9 -->
+                        <div class="content" id="content9">
+                            <h2>Conformista</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 10 -->
+                        <div class="content" id="content10">
+                            <h2>Esperto</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 11 -->
+                        <div class="content" id="content11">
+                            <h2>Ranzinza</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 12 -->
+                        <div class="content" id="content12">
+                            <h2>Excêntrico</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 13 -->
+                        <div class="content" id="content13">
+                            <h2>Diretor</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 14 -->
+                        <div class="content" id="content14">
+                            <h2>Fanático</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 15 -->
+                        <div class="content" id="content15">
+                            <h2>Galante</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 16 -->
+                        <div class="content" id="content16">
+                            <h2>Juiz</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 17 -->
+                        <div class="content" id="content17">
+                            <h2>Solitário</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 18 -->
+                        <div class="content" id="content18">
+                            <h2>Mártir</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 19 -->
+                        <div class="content" id="content19">
+                            <h2>Masoquista</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 20 -->
+                        <div class="content" id="content20">
+                            <h2>Monstro</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 21 -->
+                        <div class="content" id="content21">
+                            <h2>Pedagogo</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 22 -->
+                        <div class="content" id="content22">
+                            <h2>Penitente</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 23 -->
+                        <div class="content" id="content23">
+                            <h2>Perfeccionista</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 24 -->
+                        <div class="content" id="content24">
+                            <h2>Rebelde</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 25 -->
+                        <div class="content" id="content25">
+                            <h2>Trapaceiro</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 26 -->
+                        <div class="content" id="content26">
+                            <h2>Sobrevivente</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 27 -->
+                        <div class="content" id="content27">
+                            <h2>Caçador de Emoções</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 28 -->
+                        <div class="content" id="content28">
+                            <h2>Tradicionalista</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 29 -->
+                        <div class="content" id="content29">
+                            <h2>Comediante</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
+                        <!-- 30 -->
+                        <div class="content" id="content30">
+                            <h2>Visionário</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsum eos deserunt sed est, ea incidunt quam reprehenderit alias deleniti odit officia unde rerum, porro voluptates voluptatem, excepturi consectetur harum?</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    
     <script>
-        const coll = document.querySelectorAll('.collapsible');
-        coll.forEach(item => {
-            item.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const content = this.nextElementSibling;
-                if (content.style.display === 'block') {
-                    content.style.display = 'none';
-                } else {
-                    content.style.display = 'block';
-                }
-            });
-        });
-
         function filterCards() {
             var input, filter, cards, cardTitle, i;
             input = document.getElementById("searchInput");
@@ -137,6 +376,19 @@
                 }
             }
         }
+
+        $(document).ready(function() {
+        // Click event for each button
+        for (let i = 1; i <= 30; i++) {
+            $(`#card${i}`).on('click', function() {
+            // Remove 'shown' class from all content divs
+            $('.content').removeClass('shown');
+            
+            // Add 'shown' class to the corresponding content div
+            $(`#content${i}`).addClass('shown');
+            });
+        }
+        });
     </script>
 </body>
 </html>

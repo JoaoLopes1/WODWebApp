@@ -1,25 +1,50 @@
-.cardb {
-    border: 1px solid black;
-    margin: 10px;
-    padding: 10px;
-}
-
 .nav_center {
-    border: green solid;
-    width: 100%;
+    border: green ;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border: 4px solid #0b1f46;
+
 }
 
 .content_row {
-    border: pink solid;
+    border: pink;
+    margin: 10px;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between;    
 }
+
+.content_collumn {
+    border: pink;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.searchbar {
+    border: brown;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.info {
+    width: 100%;
+    border: blue ;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 /* collapsible start */
 .content {
     display: none;
@@ -33,6 +58,7 @@
     border-radius: 5px;
     overflow: hidden;
     width: 340px;
+    
 }
 
 .collapsible {
@@ -47,6 +73,30 @@
     box-sizing: border-box;
 }
 
+.collapsible h2 {
+    font-size: large;
+    font-weight: 100px;
+
+}
+
 .active {
     display: block;
+}
+
+.searchbar input {
+    width: 340px;
+    height: 35px;
+    color: #ffffff;
+    background-color: rgba(11, 20, 45, .7);
+    border: solid #0b1f46;;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.shown {
+    display: flex;
+}
+
+.content {
+    display: none;
 }
